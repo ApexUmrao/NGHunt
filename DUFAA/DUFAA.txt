@@ -1,0 +1,38 @@
+URL FOR NEWGENONE --> https://ftp.newgen.co.in/~NewgenONE/
+User name : NewgenONE 
+password: hHxM!gBGVf5J
+ 
+
+CREDENTIALS -->
+
+File : NewgenONE 2024.2-Windows.zip,NewgenONE OmniDocs Enterprise Service 12.0-Windows.zip,NewgenONE OmniDocs LDAP and SSO 12.0-Windows.zip
+
+Cabinet Creation & OmniDocs: nwgnejdbD+RByxB5GTPlj97tefBQ==8jsl-kX6xWi/cVS4rRAqKKahr8f2hEQUDGli0Hry5DAUBBN1dQFXBeObMaOfAIZ-gusijrAmPfj
+
+LDAP: NGPADL-369-32501720-WINOD05DPKDSSPADLOSBVP
+
+NewgenONE: U2FsdGVkX19DxRMkSa+mA8Xl9AO//VLwiIZ6s1hQwV2cv4z8byVIEa4cTBBycaUhTG9NlNVaJeNUZ3aJVJm62g==
+
+
+
+http://192.168.152.218:8080/automationstudio/
+
+
+
+VM Name : VM1239_DufaaFinAP2_152.218
+
+IP Add  : 192.168.152.218
+
+Remote  : 192.168.152.218:45589
+
+User : administrator
+Pass : Udihawa@vm1239
+
+
+
+
+NGod@2024
+
+
+
+http://127.0.0.1:8080/workspacestudio/setup
