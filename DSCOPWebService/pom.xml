@@ -1,0 +1,324 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>DSCOPWebService</groupId>
+  <artifactId>DSCOPWebService</artifactId>
+  <version>1.0</version>
+  <dependencies>
+  <dependency>
+	<groupId>activation-1.1</groupId>
+	<artifactId>activation-1.1</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/activation-1.1.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>axiom-api-1.2.10</groupId>
+	<artifactId>axiom-api-1.2.10</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/axiom-api-1.2.10.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>axis2-adb-1.6.2</groupId>
+	<artifactId>axis2-adb-1.6.2</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/axis2-adb-1.6.2.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>axis2-kernel-1.6.2</groupId>
+	<artifactId>axis2-kernel-1.6.2</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/axis2-kernel-1.6.2.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>com.ibm.mq.commonservices</groupId>
+	<artifactId>com.ibm.mq.commonservices</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/com.ibm.mq.commonservices.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>com.ibm.mq.connector</groupId>
+	<artifactId>com.ibm.mq.connector</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/com.ibm.mq.connector.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>com.ibm.mq.headers</groupId>
+	<artifactId>com.ibm.mq.headers</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/com.ibm.mq.headers.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>com.ibm.mq</groupId>
+	<artifactId>com.ibm.mq</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/com.ibm.mq.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>com.ibm.mq.jmqi</groupId>
+	<artifactId>com.ibm.mq.jmqi</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/com.ibm.mq.jmqi.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>com.ibm.mq.jmqi.local</groupId>
+	<artifactId>com.ibm.mq.jmqi.local</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/com.ibm.mq.jmqi.local.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>com.ibm.mq.jmqi.remote</groupId>
+	<artifactId>com.ibm.mq.jmqi.remote</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/com.ibm.mq.jmqi.remote.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>com.ibm.mq.jmqi.system</groupId>
+	<artifactId>com.ibm.mq.jmqi.system</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/com.ibm.mq.jmqi.system.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>com.ibm.mq.jms.admin</groupId>
+	<artifactId>com.ibm.mq.jms.admin</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/com.ibm.mq.jms.admin.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>com.ibm.mq.pcf</groupId>
+	<artifactId>com.ibm.mq.pcf</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/com.ibm.mq.pcf.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>com.ibm.mqjms</groupId>
+	<artifactId>com.ibm.mqjms</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/com.ibm.mqjms.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>com.ibm.msg.client.commonservices.j2se</groupId>
+	<artifactId>com.ibm.msg.client.commonservices.j2se</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/com.ibm.msg.client.commonservices.j2se.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>com.ibm.msg.client.commonservices</groupId>
+	<artifactId>com.ibm.msg.client.commonservices</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/com.ibm.msg.client.commonservices.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>com.ibm.msg.client.jms.internal</groupId>
+	<artifactId>com.ibm.msg.client.jms.internal</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/com.ibm.msg.client.jms.internal.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>com.ibm.msg.client.jms</groupId>
+	<artifactId>com.ibm.msg.client.jms</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/com.ibm.msg.client.jms.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>com.ibm.msg.client.matchspace</groupId>
+	<artifactId>com.ibm.msg.client.matchspace</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/com.ibm.msg.client.matchspace.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>com.ibm.msg.client.provider</groupId>
+	<artifactId>com.ibm.msg.client.provider</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/com.ibm.msg.client.provider.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>com.ibm.msg.client.ref</groupId>
+	<artifactId>com.ibm.msg.client.ref</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/com.ibm.msg.client.ref.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>com.ibm.msg.client.wmq.common</groupId>
+	<artifactId>com.ibm.msg.client.wmq.common</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/com.ibm.msg.client.wmq.common.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>com.ibm.msg.client.wmq.factories</groupId>
+	<artifactId>com.ibm.msg.client.wmq.factories</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/com.ibm.msg.client.wmq.factories.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>com.ibm.msg.client.wmq</groupId>
+	<artifactId>com.ibm.msg.client.wmq</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/com.ibm.msg.client.wmq.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>com.ibm.msg.client.wmq.v6</groupId>
+	<artifactId>com.ibm.msg.client.wmq.v6</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/com.ibm.msg.client.wmq.v6.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>commons-codec-1.4</groupId>
+	<artifactId>commons-codec-1.4</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/commons-codec-1.4.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>commons-io-2.1</groupId>
+	<artifactId>commons-io-2.1</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/commons-io-2.1.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>Decryption</groupId>
+	<artifactId>Decryption</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/Decryption.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>javax.jms-api-2.0.1</groupId>
+	<artifactId>javax.jms-api-2.0.1</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/javax.jms-api-2.0.1.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>javax.resource</groupId>
+	<artifactId>javax.resource</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/javax.resource.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>jms</groupId>
+	<artifactId>jms</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/jms.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>jsoup-1.16.1</groupId>
+	<artifactId>jsoup-1.16.1</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/jsoup-1.16.1.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>kafka-clients-7.0.1-ccs</groupId>
+	<artifactId>kafka-clients-7.0.1-ccs</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/kafka-clients-7.0.1-ccs.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>kafka-schema-serializer-7.0.1</groupId>
+	<artifactId>kafka-schema-serializer-7.0.1</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/kafka-schema-serializer-7.0.1.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>ojdbc6</groupId>
+	<artifactId>ojdbc6</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/ojdbc6.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>omnishared</groupId>
+	<artifactId>omnishared</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/omnishared.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>slf4j-api-2.0.7</groupId>
+	<artifactId>slf4j-api-2.0.7</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/slf4j-api-2.0.7.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>WebService</groupId>
+	<artifactId>WebService</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/WebService.jar</systemPath>
+</dependency>
+<dependency>
+	<groupId>wfdesktop</groupId>
+	<artifactId>wfdesktop</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/wfdesktop.jar</systemPath>
+</dependency>
+  
+  </dependencies>
+ <build>
+		<finalName>DSCOPWebService</finalName>
+		<sourceDirectory>src</sourceDirectory>
+		<pluginManagement>
+			<plugins>
+				<!--This plugin's configuration is used to store Eclipse 
+                m2e settings only. It has no influence on the Maven build itself. -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.codehaus.mojo</groupId>
+										<artifactId>aspectj-maven-plugin</artifactId>
+										<versionRange>[1.0,)</versionRange>
+										<goals>
+											<goal>test-compile</goal>
+											<goal>compile</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<execute/>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>

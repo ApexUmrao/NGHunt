@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by TIBCO WSDL-->
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://xmlns.example.com/1238441667546" xmlns:ns0="http://www.adcb.com/esb/inq/loanislamic/InqFinanceOperationDtl.xsd" xmlns:ns2="http://www.adcb.com/esb/common/header.xsd" xmlns:ns1="http://www.adcb.com/esb/common/LoanIslamicOperativeInfo.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="Untitled" targetNamespace="http://xmlns.example.com/1238441667546">
+    <wsdl:types>
+        <xs:schema xmlns="http://www.adcb.com/esb/common/LoanIslamicOperativeInfo.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.adcb.com/esb/common/LoanIslamicOperativeInfo.xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+            <xs:element name="Loan_Operative_Info">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns1:balScheduleDetails" minOccurs="0"/>
+                        <xs:element name="PDC" minOccurs="0">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="PDCAmount" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="PDCDraweeAccNO" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="PDCDate" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="PDCBankName" type="xs:string" minOccurs="0"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element ref="ns1:delinquency" minOccurs="0"/>
+                        <xs:element ref="ns1:charges" minOccurs="0"/>
+                        <xs:element name="dealerCode" type="xs:string" minOccurs="0"/>
+                        <xs:element name="sourceBy" type="xs:string" minOccurs="0"/>
+                        <xs:element name="sourceCode" type="xs:string" minOccurs="0"/>
+                        <xs:element name="loanAccNumber" type="xs:string" minOccurs="0"/>
+                        <xs:element name="loanValDate" type="xs:string" minOccurs="0"/>
+                        <xs:element name="maturityDate" type="xs:string" minOccurs="0"/>
+                        <xs:element name="settlementValDate" type="xs:string" minOccurs="0"/>
+                        <xs:element name="loanCCY" type="xs:string" minOccurs="0"/>
+                        <xs:element name="noOfDPD" type="xs:string" minOccurs="0"/>
+                        <xs:element name="profitRate" type="xs:string" minOccurs="0"/>
+                        <xs:element name="penalProfitRate" type="xs:string" minOccurs="0"/>
+                        <xs:element name="futureAccruedProfit" type="xs:string" minOccurs="0"/>
+                        <xs:element name="futurePenalAccruedProfit" type="xs:string" minOccurs="0"/>
+                        <xs:element name="esfPercentage" type="xs:string" minOccurs="0"/>
+                        <xs:element name="esfAmount" type="xs:string" minOccurs="0"/>
+                        <xs:element name="loanStatus" type="xs:string" minOccurs="0"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="balScheduleDetails">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="outstandingBal" type="xs:string" minOccurs="0"/>
+                        <xs:element name="principalPaid" type="xs:string" minOccurs="0"/>
+                        <xs:element name="penalProfitPaid" type="xs:string" minOccurs="0"/>
+                        <xs:element name="profitAccrued" type="xs:string" minOccurs="0"/>
+                        <xs:element name="profitCharged" type="xs:string" minOccurs="0"/>
+                        <xs:element name="netPayableAmt" type="xs:string" minOccurs="0"/>
+                        <xs:element name="principalBal" type="xs:string" minOccurs="0"/>
+                        <xs:element name="installmentArrears" type="xs:string" minOccurs="0"/>
+                        <xs:element name="penalProfitDue" type="xs:string" minOccurs="0"/>
+                        <xs:element name="profitDue" type="xs:string" minOccurs="0"/>
+                        <xs:element name="advancePayment" type="xs:string" minOccurs="0"/>
+                        <xs:element name="advancePaymentDate" type="xs:string" minOccurs="0"/>
+                        <xs:element name="totalDeferements" type="xs:string" minOccurs="0"/>
+                        <xs:element name="lastDefDate" type="xs:string" minOccurs="0"/>
+                        <xs:element name="currentYearDeferements" type="xs:string" minOccurs="0"/>
+                        <xs:element name="currentSettlementAccount" type="xs:string" minOccurs="0"/>
+                        <xs:element name="bookedAssetValue" type="xs:string" minOccurs="0"/>
+                        <xs:element name="firstPaymentDate" type="xs:string" minOccurs="0"/>
+                        <xs:element name="repaymentFrequency" type="xs:string" minOccurs="0"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="charges">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="feesRecovered" type="xs:string" minOccurs="0"/>
+                        <xs:element name="feeType" type="xs:string" minOccurs="0"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="delinquency">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="NoofDaysPastDue" type="xs:string" minOccurs="0"/>
+                        <xs:element name="delinquencyAmt" type="xs:string" minOccurs="0"/>
+                        <xs:element name="NPLStatus" type="xs:string" minOccurs="0"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="loan_Islamic_Operative_Info">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns1:Loan_Operative_Info" minOccurs="0"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+        <xs:schema xmlns="http://www.adcb.com/esb/inq/loanislamic/InqFinanceOperationDtl.xsd" xmlns:ns0="http://www.adcb.com/esb/common/header.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.adcb.com/esb/inq/loanislamic/InqFinanceOperationDtl.xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+            <xs:import namespace="http://www.adcb.com/esb/common/LoanIslamicOperativeInfo.xsd"/>
+            <xs:import namespace="http://www.adcb.com/esb/common/header.xsd"/>
+            <xs:element name="GetLoanIslamicOperativeInfoReq">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="LoanAcctNo" minOccurs="0"/>
+                        <xs:element name="customerId" type="xs:string" minOccurs="0"/>
+                        <xs:element name="settlementValDate" type="xs:string" minOccurs="0"/>
+                        <xs:element name="esfPercentage" type="xs:string" minOccurs="0"/>
+                        <xs:element name="esfAmount" type="xs:string" minOccurs="0"/>
+                        <xs:element name="loanForeClosureFlag" type="xs:string" minOccurs="0"/>
+                        <xs:element name="productCategory" type="xs:string" minOccurs="0"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetLoanIslamicOperativeInfoReqMsg">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:header"/>
+                        <xs:element ref="GetLoanIslamicOperativeInfoReq"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetLoanIslamicOperativeInfoRes">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns1:loan_Islamic_Operative_Info"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetLoanIslamicOperativeInfoResMsg">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:header"/>
+                        <xs:element ref="GetLoanIslamicOperativeInfoRes" minOccurs="0"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="LoanAcctNo" type="xs:string"/>
+        </xs:schema>
+        <xs:schema xmlns="http://www.adcb.com/esb/common/header.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.adcb.com/esb/common/header.xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+            <xs:complexType name="headerType">
+                <xs:sequence>
+                    <xs:element name="usecaseID" type="xs:string" minOccurs="0"/>
+                    <xs:element name="serviceName" type="xs:string"/>
+                    <xs:element name="versionNo" type="xs:string"/>
+                    <xs:element name="serviceAction" type="xs:string" minOccurs="0"/>
+                    <xs:element name="correlationID" type="xs:string" minOccurs="0"/>
+                    <xs:element name="sysRefNumber" type="xs:string"/>
+                    <xs:element name="senderID" type="xs:string"/>
+                    <xs:element name="consumer" type="xs:string" minOccurs="0"/>
+                    <xs:element name="reqTimeStamp" type="xs:string"/>
+                    <xs:element name="repTimeStamp" type="xs:string" minOccurs="0"/>
+                    <xs:element name="username" type="xs:string" minOccurs="0"/>
+                    <xs:element name="credentials" type="xs:string" minOccurs="0"/>
+                    <xs:element name="returnCode" type="xs:string" minOccurs="0"/>
+                    <xs:element name="errorDescription" type="xs:string" minOccurs="0"/>
+                    <xs:element name="errorDetail" type="xs:string" minOccurs="0"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="header" type="ns2:headerType"/>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:service name="InqFinanceOperationDtl">
+        <wsdl:port name="InqLoanIslamicOperativeInfoPortTypeEndpoint1" binding="tns:InqLoanIslamicOperativeInfoPortTypeEndpoint1Binding">
+            <soap:address location="http://10.101.107.25:5505/Services/EnterpriseServicesInquiry/LoanIslamic/Service/InqFinanceOperationDtl.serviceagent/InqLoanIslamicOperativeInfoPortTypeEndpoint1"/>
+        </wsdl:port>
+    </wsdl:service>
+    <wsdl:portType name="InqLoanIslamicOperativeInfoPortType">
+        <wsdl:operation name="GetLoanIslamicOperativeInfo_Oper">
+            <wsdl:input message="tns:InputMessage"/>
+            <wsdl:output message="tns:OutputMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="InqLoanIslamicOperativeInfoPortTypeEndpoint1Binding" type="tns:InqLoanIslamicOperativeInfoPortType">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="GetLoanIslamicOperativeInfo_Oper">
+            <soap:operation style="document" soapAction="/Services/EnterpriseServicesInquiry/LoanIslamic/Service/InqFinanceOperationDtl.serviceagent/InqLoanIslamicOperativeInfoPortTypeEndpoint1/GetLoanIslamicOperativeInfo_Oper"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="InputMsg"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="OutputMsg"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:message name="InputMessage">
+        <wsdl:part name="InputMsg" element="ns0:GetLoanIslamicOperativeInfoReqMsg"/>
+    </wsdl:message>
+    <wsdl:message name="OutputMessage">
+        <wsdl:part name="OutputMsg" element="ns0:GetLoanIslamicOperativeInfoResMsg"/>
+    </wsdl:message>
+</wsdl:definitions>

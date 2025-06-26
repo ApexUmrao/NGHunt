@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by TIBCO WSDL-->
+<wsdl:definitions xmlns:ns1="http://www.adcb.com/esb/common/header.xsd" xmlns:tns="http://xmlns.example.com/1526811081156" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns0="http://www.adcb.com/esb/inq/ApiGatewayInq/InqCentralBankOps.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="Untitled" targetNamespace="http://xmlns.example.com/1526811081156">
+    <wsdl:types>
+        <xs:schema xmlns="http://www.adcb.com/esb/inq/ApiGatewayInq/InqCentralBankOps.xsd" xmlns:ns0="http://www.adcb.com/esb/common/header.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.adcb.com/esb/inq/ApiGatewayInq/InqCentralBankOps.xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+            <xs:import namespace="http://www.adcb.com/esb/common/header.xsd"/>
+            <xs:element name="getComCustomerInfoReqMsg">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:header"/>
+                        <xs:element name="getComCustomerInfoReq">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="cin" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="csNo" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="custArabName" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="custEngName" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="custIdNo" type="xs:string" minOccurs="0"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getComCustomerInfoResMsg">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:header"/>
+                        <xs:element name="getComCustomerInfoRes" minOccurs="0">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="ResponseDetail" minOccurs="0">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="respStat" minOccurs="0">
+                                                    <xs:complexType>
+                                                        <xs:sequence>
+                                                            <xs:element name="wsiRefNo" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="responseCode" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="responseMessage" type="xs:string" minOccurs="0"/>
+                                                        </xs:sequence>
+                                                    </xs:complexType>
+                                                </xs:element>
+                                                <xs:element name="responseList" minOccurs="0">
+                                                    <xs:complexType>
+                                                        <xs:sequence>
+                                                            <xs:element name="response" minOccurs="0">
+                                                                <xs:complexType>
+                                                                    <xs:sequence>
+                                                                        <xs:element name="respStat" minOccurs="0">
+                                                                            <xs:complexType>
+                                                                                <xs:sequence>
+                                                                                    <xs:element name="responseCode" type="xs:string" minOccurs="0"/>
+                                                                                    <xs:element name="responseMessage" type="xs:string" minOccurs="0"/>
+                                                                                </xs:sequence>
+                                                                            </xs:complexType>
+                                                                        </xs:element>
+                                                                        <xs:element name="wsData" minOccurs="0">
+                                                                            <xs:complexType>
+                                                                                <xs:sequence>
+                                                                                    <xs:element name="cin" type="xs:string" minOccurs="0"/>
+                                                                                    <xs:element name="csNo" type="xs:string" minOccurs="0"/>
+                                                                                    <xs:element name="custArabName" type="xs:string" minOccurs="0"/>
+                                                                                    <xs:element name="custEngName" type="xs:string" minOccurs="0"/>
+                                                                                    <xs:element name="custIdNo" type="xs:string" minOccurs="0"/>
+                                                                                </xs:sequence>
+                                                                            </xs:complexType>
+                                                                        </xs:element>
+                                                                        <xs:element name="wsRespList" minOccurs="0">
+                                                                            <xs:complexType>
+                                                                                <xs:sequence>
+                                                                                    <xs:element name="customerData" minOccurs="0" maxOccurs="unbounded">
+                                                                                        <xs:complexType>
+                                                                                            <xs:sequence>
+                                                                                                <xs:element name="cin" type="xs:string" minOccurs="0"/>
+                                                                                                <xs:element name="csNo" type="xs:string" minOccurs="0"/>
+                                                                                                <xs:element name="bankCode" type="xs:string" minOccurs="0"/>
+                                                                                                <xs:element name="custArabName" type="xs:string" minOccurs="0"/>
+                                                                                                <xs:element name="custEngName" type="xs:string" minOccurs="0"/>
+                                                                                                <xs:element name="customerBorrowersInfo" minOccurs="0">
+                                                                                                    <xs:complexType>
+                                                                                                        <xs:sequence>
+                                                                                                            <xs:element name="licIdNo" type="xs:string" minOccurs="0"/>
+                                                                                                            <xs:element name="facClass" type="xs:string" minOccurs="0"/>
+                                                                                                            <xs:element name="limitFunded" type="xs:string" minOccurs="0"/>
+                                                                                                            <xs:element name="limitContigent" type="xs:string" minOccurs="0"/>
+                                                                                                            <xs:element name="limitTotal" type="xs:string" minOccurs="0"/>
+                                                                                                            <xs:element name="outstandingFunded" type="xs:string" minOccurs="0"/>
+                                                                                                            <xs:element name="outstandingContigent" type="xs:string" minOccurs="0"/>
+                                                                                                            <xs:element name="outstandingTotal" type="xs:string" minOccurs="0"/>
+                                                                                                            <xs:element name="lastUpdated" type="xs:string" minOccurs="0"/>
+                                                                                                            <xs:element name="borrowerType" type="xs:string" minOccurs="0"/>
+                                                                                                            <xs:element name="businessType" type="xs:string" minOccurs="0"/>
+                                                                                                            <xs:element name="nat" type="xs:string" minOccurs="0"/>
+                                                                                                            <xs:element name="estDate" type="xs:string" minOccurs="0"/>
+                                                                                                            <xs:element name="capital" type="xs:string" minOccurs="0"/>
+                                                                                                            <xs:element name="auditor" type="xs:string" minOccurs="0"/>
+                                                                                                            <xs:element name="provision" type="xs:string" minOccurs="0"/>
+                                                                                                            <xs:element name="suspndIntr" type="xs:string" minOccurs="0"/>
+                                                                                                        </xs:sequence>
+                                                                                                    </xs:complexType>
+                                                                                                </xs:element>
+                                                                                                <xs:element name="customerPartnersInfo" minOccurs="0">
+                                                                                                    <xs:complexType>
+                                                                                                        <xs:sequence>
+                                                                                                            <xs:element name="partner" minOccurs="0" maxOccurs="unbounded">
+                                                                                                                <xs:complexType>
+                                                                                                                    <xs:sequence>
+                                                                                                                        <xs:element name="partnerEngName" type="xs:string" minOccurs="0"/>
+                                                                                                                        <xs:element name="partnerArbName" type="xs:string" minOccurs="0"/>
+                                                                                                                        <xs:element name="nationality" type="xs:string" minOccurs="0"/>
+                                                                                                                        <xs:element name="percentage" type="xs:string" minOccurs="0"/>
+                                                                                                                    </xs:sequence>
+                                                                                                                </xs:complexType>
+                                                                                                            </xs:element>
+                                                                                                        </xs:sequence>
+                                                                                                    </xs:complexType>
+                                                                                                </xs:element>
+                                                                                                <xs:element name="customerSecuritiesInfo" minOccurs="0">
+                                                                                                    <xs:complexType>
+                                                                                                        <xs:sequence>
+                                                                                                            <xs:element name="securities" minOccurs="0" maxOccurs="unbounded">
+                                                                                                                <xs:complexType>
+                                                                                                                    <xs:sequence>
+                                                                                                                        <xs:element name="secId" type="xs:string" minOccurs="0"/>
+                                                                                                                        <xs:element name="secType" type="xs:string" minOccurs="0"/>
+                                                                                                                        <xs:element name="secValue" type="xs:string" minOccurs="0"/>
+                                                                                                                    </xs:sequence>
+                                                                                                                </xs:complexType>
+                                                                                                            </xs:element>
+                                                                                                        </xs:sequence>
+                                                                                                    </xs:complexType>
+                                                                                                </xs:element>
+                                                                                            </xs:sequence>
+                                                                                        </xs:complexType>
+                                                                                    </xs:element>
+                                                                                </xs:sequence>
+                                                                            </xs:complexType>
+                                                                        </xs:element>
+                                                                    </xs:sequence>
+                                                                </xs:complexType>
+                                                            </xs:element>
+                                                        </xs:sequence>
+                                                    </xs:complexType>
+                                                </xs:element>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                    <xs:element name="ResponseStatus" minOccurs="0">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="wsiRefNo" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="responseCode" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="responseMessage" type="xs:string" minOccurs="0"/>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getCustomerRatingReqMsg">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:header"/>
+                        <xs:element name="getCustomerRatingReq">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="cin" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="firstName" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="secondName" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="thirdName" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="familyName" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="fileNumber" type="xs:string" minOccurs="0"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getCustomerRatingResMsg">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:header"/>
+                        <xs:element name="getCustomerRatingRes" minOccurs="0">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="responseDetail" minOccurs="0">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="respStat" minOccurs="0">
+                                                    <xs:complexType>
+                                                        <xs:sequence>
+                                                            <xs:element name="wsiRefNo" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="responseCode" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="responseMessage" type="xs:string" minOccurs="0"/>
+                                                        </xs:sequence>
+                                                    </xs:complexType>
+                                                </xs:element>
+                                                <xs:element name="responseList" minOccurs="0">
+                                                    <xs:complexType>
+                                                        <xs:sequence>
+                                                            <xs:element name="response" minOccurs="0">
+                                                                <xs:complexType>
+                                                                    <xs:sequence>
+                                                                        <xs:element name="respStat" minOccurs="0">
+                                                                            <xs:complexType>
+                                                                                <xs:sequence>
+                                                                                    <xs:element name="responseCode" type="xs:string" minOccurs="0"/>
+                                                                                    <xs:element name="responseMessage" type="xs:string" minOccurs="0"/>
+                                                                                </xs:sequence>
+                                                                            </xs:complexType>
+                                                                        </xs:element>
+                                                                        <xs:element name="wsData" minOccurs="0">
+                                                                            <xs:complexType>
+                                                                                <xs:sequence>
+                                                                                    <xs:element name="cin" type="xs:string" minOccurs="0"/>
+                                                                                    <xs:element name="firstName" type="xs:string" minOccurs="0"/>
+                                                                                    <xs:element name="secondName" type="xs:string" minOccurs="0"/>
+                                                                                    <xs:element name="thirdName" type="xs:string" minOccurs="0"/>
+                                                                                    <xs:element name="familyName" type="xs:string" minOccurs="0"/>
+                                                                                    <xs:element name="fileNumber" type="xs:string" minOccurs="0"/>
+                                                                                </xs:sequence>
+                                                                            </xs:complexType>
+                                                                        </xs:element>
+                                                                        <xs:element name="wsRespList" minOccurs="0">
+                                                                            <xs:complexType>
+                                                                                <xs:sequence>
+                                                                                    <xs:element name="responseList" minOccurs="0" maxOccurs="unbounded">
+                                                                                        <xs:complexType>
+                                                                                            <xs:sequence>
+                                                                                                <xs:element name="bankName" type="xs:string" minOccurs="0"/>
+                                                                                                <xs:element name="referenceNum" type="xs:string" minOccurs="0"/>
+                                                                                                <xs:element name="cin" type="xs:string" minOccurs="0"/>
+                                                                                                <xs:element name="firstName" type="xs:string" minOccurs="0"/>
+                                                                                                <xs:element name="secondName" type="xs:string" minOccurs="0"/>
+                                                                                                <xs:element name="thirdName" type="xs:string" minOccurs="0"/>
+                                                                                                <xs:element name="familyName" type="xs:string" minOccurs="0"/>
+                                                                                                <xs:element name="fileNumber" type="xs:string" minOccurs="0"/>
+                                                                                                <xs:element name="cusNatid" type="xs:string" minOccurs="0"/>
+                                                                                                <xs:element name="currentRating" type="xs:string" minOccurs="0"/>
+                                                                                                <xs:element name="lastUpdate" type="xs:string" minOccurs="0"/>
+                                                                                            </xs:sequence>
+                                                                                        </xs:complexType>
+                                                                                    </xs:element>
+                                                                                </xs:sequence>
+                                                                            </xs:complexType>
+                                                                        </xs:element>
+                                                                    </xs:sequence>
+                                                                </xs:complexType>
+                                                            </xs:element>
+                                                        </xs:sequence>
+                                                    </xs:complexType>
+                                                </xs:element>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                    <xs:element name="responseStatus" minOccurs="0">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="wsiRefNo" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="responseCode" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="responseMessage" type="xs:string" minOccurs="0"/>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+        <xs:schema xmlns="http://www.adcb.com/esb/common/header.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.adcb.com/esb/common/header.xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+            <xs:complexType name="headerType">
+                <xs:sequence>
+                    <xs:element name="usecaseID" type="xs:string" minOccurs="0"/>
+                    <xs:element name="serviceName" type="xs:string"/>
+                    <xs:element name="versionNo" type="xs:string"/>
+                    <xs:element name="serviceAction" type="xs:string" minOccurs="0"/>
+                    <xs:element name="correlationID" type="xs:string" minOccurs="0"/>
+                    <xs:element name="sysRefNumber" type="xs:string"/>
+                    <xs:element name="senderID" type="xs:string"/>
+                    <xs:element name="consumer" type="xs:string" minOccurs="0"/>
+                    <xs:element name="reqTimeStamp" type="xs:string"/>
+                    <xs:element name="repTimeStamp" type="xs:string" minOccurs="0"/>
+                    <xs:element name="username" type="xs:string" minOccurs="0"/>
+                    <xs:element name="credentials" type="xs:string" minOccurs="0"/>
+                    <xs:element name="returnCode" type="xs:string" minOccurs="0"/>
+                    <xs:element name="errorDescription" type="xs:string" minOccurs="0"/>
+                    <xs:element name="errorDetail" type="xs:string" minOccurs="0"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="header" type="ns1:headerType"/>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:service name="InqCentralBankOps">
+        <wsdl:port name="InqCentralBankOpsPortTypeEndpoint1" binding="tns:InqCentralBankOpsPortTypeEndpoint1Binding">
+            <soap:address location="http://10.146.163.71:5550/Services/APIGatewayServices/APIGatewayServicesInquiry/Service/InqCentralBankOps.serviceagent/InqCentralBankOpsPortTypeEndpoint1"/>
+        </wsdl:port>
+    </wsdl:service>
+    <wsdl:portType name="InqCentralBankOpsPortType">
+        <wsdl:operation name="getComCustomerInfo_Oper">
+            <wsdl:input message="tns:getComCustomerInfoInputMessage"/>
+            <wsdl:output message="tns:getComCustomerInfoOutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="getCustomerRating_Oper">
+            <wsdl:input message="tns:getCustomerRatingInputMessage"/>
+            <wsdl:output message="tns:getCustomerRatingOutputMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="InqCentralBankOpsPortTypeEndpoint1Binding" type="tns:InqCentralBankOpsPortType">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="getComCustomerInfo_Oper">
+            <soap:operation style="document" soapAction="/Services/APIGatewayServices/APIGatewayServicesInquiry/Service/InqCentralBankOps.serviceagent/InqCentralBankOpsPortTypeEndpoint1/getComCustomerInfo_Oper"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="getComCustomerInfoInputMsg"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="getComCustomerInfoOutputMsg"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getCustomerRating_Oper">
+            <soap:operation style="document" soapAction="/Services/APIGatewayServices/APIGatewayServicesInquiry/Service/InqCentralBankOps.serviceagent/InqCentralBankOpsPortTypeEndpoint1/getCustomerRating_Oper"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="getCustomerRatingInputMsg"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="getCustomerRatingOutputMsg"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:message name="getComCustomerInfoInputMessage">
+        <wsdl:part name="getComCustomerInfoInputMsg" element="ns0:getComCustomerInfoReqMsg"/>
+    </wsdl:message>
+    <wsdl:message name="getComCustomerInfoOutputMessage">
+        <wsdl:part name="getComCustomerInfoOutputMsg" element="ns0:getComCustomerInfoResMsg"/>
+    </wsdl:message>
+    <wsdl:message name="getCustomerRatingInputMessage">
+        <wsdl:part name="getCustomerRatingInputMsg" element="ns0:getCustomerRatingReqMsg"/>
+    </wsdl:message>
+    <wsdl:message name="getCustomerRatingOutputMessage">
+        <wsdl:part name="getCustomerRatingOutputMsg" element="ns0:getCustomerRatingResMsg"/>
+    </wsdl:message>
+</wsdl:definitions>

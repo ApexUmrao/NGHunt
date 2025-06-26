@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by TIBCO WSDL-->
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://xmlns.example.com/1242549484905" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns0="http://www.adcb.com/esb/mnt/NonCard/AddSendSMSEmail.xsd" xmlns:ns1="http://www.adcb.com/esb/common/header.xsd" name="Untitled" targetNamespace="http://xmlns.example.com/1242549484905">
+    <wsdl:types>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.adcb.com/esb/mnt/NonCard/AddSendSMSEmail.xsd" xmlns:ns0="http://www.adcb.com/esb/common/header.xsd" targetNamespace="http://www.adcb.com/esb/mnt/NonCard/AddSendSMSEmail.xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+            <xs:import namespace="http://www.adcb.com/esb/common/header.xsd"/>
+            <xs:element name="SMSServiceReq">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="SMSReq" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="customerID" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="acctNumber" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="transactionType" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="sendAsChannel" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="smsTemplateID" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="smsTextValues" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="mobileNumber" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="emailTemplateID" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="emailTextValues" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="emailAddress" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="flexiFiller1" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="flexiFiller2" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="flexiFiller3" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="flexiFiller4" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="flexiFiller5" type="xs:string" minOccurs="0"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="SMSServiceRes">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="SMSRes" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="customerID" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="acctNumber" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="status" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="reason" type="xs:string" minOccurs="0"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="SRSMSServiceReqMsg">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:header"/>
+                        <xs:element ref="SMSServiceReq"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="SRSMSServiceResMsg">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:header"/>
+                        <xs:element ref="SMSServiceRes" minOccurs="0"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.adcb.com/esb/common/header.xsd" targetNamespace="http://www.adcb.com/esb/common/header.xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+            <xs:complexType name="headerType">
+                <xs:sequence>
+                    <xs:element name="usecaseID" type="xs:string" minOccurs="0"/>
+                    <xs:element name="serviceName" type="xs:string"/>
+                    <xs:element name="versionNo" type="xs:string"/>
+                    <xs:element name="serviceAction" type="xs:string" minOccurs="0"/>
+                    <xs:element name="correlationID" type="xs:string" minOccurs="0"/>
+                    <xs:element name="sysRefNumber" type="xs:string"/>
+                    <xs:element name="senderID" type="xs:string"/>
+                    <xs:element name="consumer" type="xs:string" minOccurs="0"/>
+                    <xs:element name="reqTimeStamp" type="xs:string"/>
+                    <xs:element name="repTimeStamp" type="xs:string" minOccurs="0"/>
+                    <xs:element name="username" type="xs:string" minOccurs="0"/>
+                    <xs:element name="credentials" type="xs:string" minOccurs="0"/>
+                    <xs:element name="returnCode" type="xs:string" minOccurs="0"/>
+                    <xs:element name="errorDescription" type="xs:string" minOccurs="0"/>
+                    <xs:element name="errorDetail" type="xs:string" minOccurs="0"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="header" type="ns1:headerType"/>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:service name="AddSendSMSEmail">
+        <wsdl:port name="AddSendSMSEmailPortTypeEndpoint1" binding="tns:AddSendSMSEmailPortTypeEndpoint1Binding">
+            <soap:address location="http://10.109.1.57:6502/Services/EnterpriseServicesMaintenance/NonCard/Service/AddSendSMSEmail.serviceagent/AddSendSMSEmailPortTypeEndpoint1"/>
+        </wsdl:port>
+    </wsdl:service>
+    <wsdl:portType name="AddSendSMSEmailPortType">
+        <wsdl:operation name="AddSendSMSEmail_Oper">
+            <wsdl:input message="tns:InputMessage"/>
+            <wsdl:output message="tns:OutputMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="AddSendSMSEmailPortTypeEndpoint1Binding" type="tns:AddSendSMSEmailPortType">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="AddSendSMSEmail_Oper">
+            <soap:operation style="document" soapAction="/Services/EnterpriseServicesMaintenance/NonCard/Service/AddSendSMSEmail.serviceagent/AddSendSMSEmailPortTypeEndpoint1/AddSendSMSEmail_Oper"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="InputMsg"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="OutputMsg"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:message name="InputMessage">
+        <wsdl:part name="InputMsg" element="ns0:SRSMSServiceReqMsg"/>
+    </wsdl:message>
+    <wsdl:message name="OutputMessage">
+        <wsdl:part name="OutputMsg" element="ns0:SRSMSServiceResMsg"/>
+    </wsdl:message>
+</wsdl:definitions>

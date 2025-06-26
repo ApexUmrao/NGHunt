@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by TIBCO WSDL-->
+<wsdl:definitions xmlns:ns1="http://www.adcb.com/esb/common/header.xsd" xmlns:tns="http://xmlns.example.com/1517398659701" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns0="http://www.adcb.com/esb/mnt/CustomerDigitalJourney/ModCBGCustomerOnboarding.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="Untitled" targetNamespace="http://xmlns.example.com/1517398659701">
+    <wsdl:types>
+        <xs:schema xmlns="http://www.adcb.com/esb/mnt/CustomerDigitalJourney/ModCBGCustomerOnboarding.xsd" xmlns:ns0="http://www.adcb.com/esb/common/header.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.adcb.com/esb/mnt/CustomerDigitalJourney/ModCBGCustomerOnboarding.xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+            <xs:import namespace="http://www.adcb.com/esb/common/header.xsd"/>
+            <xs:element name="addCardCCPSApplicationReqMsg">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:header"/>
+                        <xs:element name="addCardCCPSApplicationReq">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="applicationDetails" minOccurs="0">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="customerDemographicsInfo" minOccurs="0">
+                                                    <xs:complexType>
+                                                        <xs:sequence>
+                                                            <xs:element name="custPrefix" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custCategory" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custCustomerType" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custSubsegmentType" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custCustomerCategory" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custLocation" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custFullName" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custShortname" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custMothersMadien" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custNationality" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custDob" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custGender" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custOurbankstaff" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custEmiratesId" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custEidaExpiryDt" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custVisaExpiryDt" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custBankingWithUs" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custEmailAddress" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custMobileNo" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custEduQualification" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custMaritalStatus" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custPassportNo" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custPpIssueDt" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custPpExpiryDt" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custProfession" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custMailAddr1" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custMailAddr2" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custMailAddr3" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custMailAddrCity" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custMailAddrState" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custMailAddrZip" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custPresentCountry" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custCntryOfRes" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custRunningSerial" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custRelationshipValue" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custCustomerClass" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="customerId" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custCurrUnsecuredExp" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custAod" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custHomeAddr1" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custHomeAddr2" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custHomeAddr3" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custHomeState" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custHomeZip" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custHomeCountry" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custHmecntryPhone" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custResidencePhone" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custCreditBureauConsentFlg" type="xs:string" minOccurs="0"/>
+                                                        </xs:sequence>
+                                                    </xs:complexType>
+                                                </xs:element>
+                                                <xs:element name="customerEmploymentInfo" minOccurs="0">
+                                                    <xs:complexType>
+                                                        <xs:sequence>
+                                                            <xs:element name="custNetincome" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custTmlFlg" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custLos" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custLoe" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custEmploymentType" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custEmpCategory" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custEmployerName" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custEmployeeCategory" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custEmployerPhone" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custGrossIncome" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custDoj" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custIndustryClass" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custDesignation" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custEmpAddr1" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custEmployerEmirates" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custStaffId" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custFixedIncome" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custJobConfirmation" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custServicePeriod" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custEmployerType" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custEmpCode" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custNoOfSalCredits" type="xs:string" minOccurs="0"/>
+                                                        </xs:sequence>
+                                                    </xs:complexType>
+                                                </xs:element>
+                                                <xs:element name="otherCustDetails" minOccurs="0">
+                                                    <xs:complexType>
+                                                        <xs:sequence>
+                                                            <xs:element name="custAvgSalary" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custApplicantType" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custAvgMobileBill" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custChqReturns" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custSelfEmpCat" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custLob" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="custNatureOfBuss" type="xs:string" minOccurs="0"/>
+                                                        </xs:sequence>
+                                                    </xs:complexType>
+                                                </xs:element>
+                                                <xs:element name="cardDetails" minOccurs="0">
+                                                    <xs:complexType>
+                                                        <xs:sequence>
+                                                            <xs:element name="productType" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="cardType" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="comboFlag" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="productCode" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="creditLimit" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="creditFlag" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="promoValue" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="dsaCode" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="orgRefNo" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="promptPayment" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="embossingName" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="standingInstruction" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="adcbAccountNo" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="siPercentage" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="primaryProduct" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="firstLevelPromocode" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="secondLevelPromocode" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="creditLimitIncrease" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="emirateSourcecode" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="salaryTransfer" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="statementCycle" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="onlineDebitday" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="thirdlevelPromo" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="creditShield" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="fileLocation" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="tamoohaEnabledflg" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="applicationSignedDt" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="supplementaryLimitPercent" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="ecbCheckReq" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="limitSignOffLevel" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="c2cBankName" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="creditCardUtilPercent" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="loanOnCard" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="estmtFlag" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="printStmtFlag" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="creditDecision" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="groupFlag" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="tracerScore" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="tracerPolicy" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="edmsRefNo" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="branchCode" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="edmsEnableFlg" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="primaryCardNo" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="supplName" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="supplPrefix" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="supplEmbName" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="supplRelationship" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="supplDob" type="xs:string" minOccurs="0"/>
+                                                        </xs:sequence>
+                                                    </xs:complexType>
+                                                </xs:element>
+                                                <xs:element name="prescreeningDetails" minOccurs="0">
+                                                    <xs:complexType>
+                                                        <xs:sequence>
+                                                            <xs:element name="prescrnMobileChk" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="prescrnAdcbrelChk" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="prescrnMisChk" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="prescrnDebtMgrChk" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="prescrnMidasChk" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="prescrnClsdAcctChk" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="prescrnCustBlklistChk" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="prescrnCompBlklistChk" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="prescrnAcctCustmemo" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="prescrnDowJones" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="prescrnCbRating" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="prescrnEmCredit" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="prescrnCbRbExposure" type="xs:string" minOccurs="0"/>
+                                                        </xs:sequence>
+                                                    </xs:complexType>
+                                                </xs:element>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="addCardCCPSApplicationResMsg">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:header"/>
+                        <xs:element name="addCardCCPSApplicationRes" minOccurs="0">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="lapsApplicationNo" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="cardNumber" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="cardExpiryDate" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="cardLogo" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="status" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="reason" type="xs:string" minOccurs="0"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="addOnlineLeadReqMsg">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:header"/>
+                        <xs:element name="addOnlineLeadReq">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="leadRefNumber" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="leadStatus" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="productCode" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="productGroup" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="portalstatus" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="businessTurnover" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="businessSegment" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="ADCBWBGR2ExpiryDate" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="ADCBNoYearsBusiness" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="freeZoneLocation" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="tradeLicenseNumber" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="tradeLicenseIssueDate" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="companyName" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="legalConstitution" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="placeOfIncorporation" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="RMName" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="customerId" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="emirateLoc" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="portalchannel" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="emailKeyContactPerson" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="firstNKeyContactPerson" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="lastNKeyContactPerson" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="mobKeyContactPerson" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="integrationId" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="typeofRelationship" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="InqLeadAuthSignatory" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="customerName" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="mobile" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="prefix" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="iSSignatoryResidentofUAE" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="countryOfResidence" type="xs:string" minOccurs="0"/>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                    <xs:element name="InqLeadOwnershipStructure" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="nameofOwner" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="placeofIncorporation" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="countryofLegalResidence" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="status" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="physicalAddress" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="type" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="sharesPercentage" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="ownerType" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="prefix" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="nationality" type="xs:string" minOccurs="0"/>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                    <xs:element name="InqPrimaryContactDetails" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="contactPerson" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="disignation" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="department" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="telephone" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="mobile" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="officialEmail" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="phPOBox" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="phOfficeUnitNo" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="phBuildingName" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="phStreetName" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="phCountry" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="phEmirate" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="phCity" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="phOfficeNumber" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="corrPOBox" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="corrCountry" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="corrEmirate" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="corrCity" type="xs:string" minOccurs="0"/>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                    <xs:element name="InqLeadAccountDetails" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="accountType" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="deliveryContactMobileNumber" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="deliveryMethod" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="modeOfOperation" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="chequeBookRequired" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="branchName" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="emiratesIDNo" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="deliveryContactName" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="operatingInstruction" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="InqLeadAccountCurrency" maxOccurs="unbounded">
+                                                    <xs:complexType>
+                                                        <xs:sequence>
+                                                            <xs:element name="currency" type="xs:string" minOccurs="0"/>
+                                                        </xs:sequence>
+                                                    </xs:complexType>
+                                                </xs:element>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                    <xs:element name="InqLeadCRS" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="entityType" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="entityStatus" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="countryOfTaxResidency" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="reasonsForNotProvidingTIN" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="taxpayerIdentificationNumber" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="InqLeadCRSCP" maxOccurs="unbounded">
+                                                    <xs:complexType>
+                                                        <xs:sequence>
+                                                            <xs:element name="firstName" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="lastName" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="countryOfBirth" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="dateOfBirth" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="cityOfBirth" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="buildingName" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="villaFlateNo" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="street" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="city" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="emirate" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="country" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="typeOfControllingPerson" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="countryOfTaxResidency" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="taxpayerIdentificationNumber" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="reasonsForNotProvidingTIN" type="xs:string" minOccurs="0"/>
+                                                        </xs:sequence>
+                                                    </xs:complexType>
+                                                </xs:element>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                    <xs:element name="InqLeadFATCA" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="natureofEntity" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="EIN" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="fATCAStatus" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="entityStatus" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="GIIN" type="xs:string" minOccurs="0"/>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                    <xs:element name="InqLeadSMEFin" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="facilitiesSelected" type="xs:string" minOccurs="0"/>
+                                                <xs:element name="productInterested" type="xs:string" minOccurs="0"/>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="addOnlineLeadResMsg">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:header"/>
+                        <xs:element name="addOnlineLeadRes" minOccurs="0">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="leadRefNumber" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="status" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="reason" type="xs:string" minOccurs="0"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="updateBPMWorkItemDetailsReqMsg">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:header"/>
+                        <xs:element name="updateBPMWorkItemDetailsReq">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="serviceMode" type="xs:string"/>
+                                    <xs:element name="workItemNumber" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="applicationLanguage" type="xs:string"/>
+                                    <xs:element name="applicationName" type="xs:string"/>
+                                    <xs:element name="applicationStage" type="xs:string"/>
+                                    <xs:element name="deviceIP" type="xs:string"/>
+                                    <xs:element name="deviceID" type="xs:string"/>
+                                    <xs:element name="sourcingCenter" type="xs:string"/>
+                                    <xs:element name="sourcingChannel" type="xs:string"/>
+                                    <xs:element name="applicationAttributes" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="name" type="xs:string"/>
+                                                <xs:element name="attributeDetails" minOccurs="0" maxOccurs="unbounded">
+                                                    <xs:complexType>
+                                                        <xs:sequence>
+                                                            <xs:element name="attributes" minOccurs="0" maxOccurs="unbounded">
+                                                                <xs:complexType>
+                                                                    <xs:sequence>
+                                                                        <xs:element name="attributeKey" type="xs:string"/>
+                                                                        <xs:element name="attributeValue" type="xs:string"/>
+                                                                    </xs:sequence>
+                                                                </xs:complexType>
+                                                            </xs:element>
+                                                        </xs:sequence>
+                                                    </xs:complexType>
+                                                </xs:element>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="updateBPMWorkItemDetailsResMsg">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:header"/>
+                        <xs:element name="updateBPMWorkItemDetailsRes" minOccurs="0">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="serviceMode" type="xs:string"/>
+                                    <xs:element name="workItemNumber" type="xs:string"/>
+                                    <xs:element name="applicationStage" type="xs:string"/>
+                                    <xs:element name="status" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="reason" type="xs:string" minOccurs="0"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+        <xs:schema xmlns="http://www.adcb.com/esb/common/header.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.adcb.com/esb/common/header.xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+            <xs:complexType name="headerType">
+                <xs:sequence>
+                    <xs:element name="usecaseID" type="xs:string" minOccurs="0"/>
+                    <xs:element name="serviceName" type="xs:string"/>
+                    <xs:element name="versionNo" type="xs:string"/>
+                    <xs:element name="serviceAction" type="xs:string" minOccurs="0"/>
+                    <xs:element name="correlationID" type="xs:string" minOccurs="0"/>
+                    <xs:element name="sysRefNumber" type="xs:string"/>
+                    <xs:element name="senderID" type="xs:string"/>
+                    <xs:element name="consumer" type="xs:string" minOccurs="0"/>
+                    <xs:element name="reqTimeStamp" type="xs:string"/>
+                    <xs:element name="repTimeStamp" type="xs:string" minOccurs="0"/>
+                    <xs:element name="username" type="xs:string" minOccurs="0"/>
+                    <xs:element name="credentials" type="xs:string" minOccurs="0"/>
+                    <xs:element name="returnCode" type="xs:string" minOccurs="0"/>
+                    <xs:element name="errorDescription" type="xs:string" minOccurs="0"/>
+                    <xs:element name="errorDetail" type="xs:string" minOccurs="0"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="header" type="ns1:headerType"/>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:service name="ModCBGCustomerOnboarding">
+        <wsdl:port name="ModCBGCustomerOnboardingPortTypeEndpoint1" binding="tns:ModCBGCustomerOnboardingPortTypeEndpoint1Binding">
+            <soap:address location="http://10.146.163.71:5544/Services/CustomerDigitalJourney/CustomerDigitalJourneyMntServices/Service/ModCBGCustomerOnboarding.serviceagent/ModCBGCustomerOnboardingPortTypeEndpoint1"/>
+        </wsdl:port>
+    </wsdl:service>
+    <wsdl:portType name="ModCBGCustomerOnboardingPortType">
+        <wsdl:operation name="addOnlineLead_Oper">
+            <wsdl:input message="tns:addOnlineLeadInputMessage"/>
+            <wsdl:output message="tns:addOnlineLeadOutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="addCardCCPSApplication_Oper">
+            <wsdl:input message="tns:addCardCCPSApplicationInputMessage"/>
+            <wsdl:output message="tns:addCardCCPSApplicationOutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateBPMWorkItemDetails_Oper">
+            <wsdl:input message="tns:updateBPMWorkItemDetailsInputMessage"/>
+            <wsdl:output message="tns:updateBPMWorkItemDetailsOutputMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="ModCBGCustomerOnboardingPortTypeEndpoint1Binding" type="tns:ModCBGCustomerOnboardingPortType">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="addOnlineLead_Oper">
+            <soap:operation style="document" soapAction="/Services/CustomerDigitalJourney/CustomerDigitalJourneyMntServices/Service/ModCBGCustomerOnboarding.serviceagent//addOnlineLead_Oper"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="addOnlineLeadInputMsg"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="addOnlineLeadOutputMsg"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="addCardCCPSApplication_Oper">
+            <soap:operation style="document" soapAction="/Services/CustomerDigitalJourney/CustomerDigitalJourneyMntServices/Service/ModCBGCustomerOnboarding.serviceagent/ModCBGCustomerOnboardingPortTypeEndpoint1/addCardCCPSApplication_Oper"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="addCardCCPSApplicationInputMsg"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="addCardCCPSApplicationOutputMsg"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="updateBPMWorkItemDetails_Oper">
+            <soap:operation style="document" soapAction="/Services/CustomerDigitalJourney/CustomerDigitalJourneyMntServices/Service/ModCBGCustomerOnboarding.serviceagent//updateBPMWorkItemDetails_Oper"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="updateBPMWorkItemDetailsInputMsg"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="updateBPMWorkItemDetailsOutputMsg"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:message name="addOnlineLeadInputMessage">
+        <wsdl:part name="addOnlineLeadInputMsg" element="ns0:addOnlineLeadReqMsg"/>
+    </wsdl:message>
+    <wsdl:message name="addOnlineLeadOutputMessage">
+        <wsdl:part name="addOnlineLeadOutputMsg" element="ns0:addOnlineLeadResMsg"/>
+    </wsdl:message>
+    <wsdl:message name="addCardCCPSApplicationInputMessage">
+        <wsdl:part name="addCardCCPSApplicationInputMsg" element="ns0:addCardCCPSApplicationReqMsg"/>
+    </wsdl:message>
+    <wsdl:message name="addCardCCPSApplicationOutputMessage">
+        <wsdl:part name="addCardCCPSApplicationOutputMsg" element="ns0:addCardCCPSApplicationResMsg"/>
+    </wsdl:message>
+    <wsdl:message name="updateBPMWorkItemDetailsInputMessage">
+        <wsdl:part name="updateBPMWorkItemDetailsInputMsg" element="ns0:updateBPMWorkItemDetailsReqMsg"/>
+    </wsdl:message>
+    <wsdl:message name="updateBPMWorkItemDetailsOutputMessage">
+        <wsdl:part name="updateBPMWorkItemDetailsOutputMsg" element="ns0:updateBPMWorkItemDetailsResMsg"/>
+    </wsdl:message>
+</wsdl:definitions>

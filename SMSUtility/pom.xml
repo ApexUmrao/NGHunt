@@ -1,0 +1,180 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>DSCOP_SMS_Utility</groupId>
+	<artifactId>DSCOP_SMS_Utility</artifactId>
+	<version>1.0</version>
+	<dependencies>
+		<dependency>
+			<groupId>Admin</groupId>
+			<artifactId>Admin</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/Admin.jar</systemPath>
+			<!-- <systemPath>${project.basedir}/libs/Admin.jar</systemPath>-->
+		</dependency>
+		<dependency>
+			<groupId>Decryption</groupId>
+			<artifactId>Decryption</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/Decryption.jar</systemPath>
+			<!-- <systemPath>${project.basedir}/libs/Decryption.jar</systemPath>-->
+		</dependency>
+		<dependency>
+			<groupId>ejb</groupId>
+			<artifactId>ejb</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/ejb.jar</systemPath>
+			<!-- <systemPath>${project.basedir}/libs/ejb.jar</systemPath>-->
+		</dependency>
+		<dependency>
+			<groupId>ejbclient</groupId>
+			<artifactId>ejbclient</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/ejbclient.jar</systemPath>
+			<!-- <systemPath>${project.basedir}/libs/ejbclient.jar</systemPath>-->
+		</dependency>
+		<dependency>
+			<groupId>Encryption</groupId>
+			<artifactId>Encryption</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/Encryption.jar</systemPath>
+			<!-- <systemPath>${project.basedir}/libs/Encryption.jar</systemPath>-->
+		</dependency>
+		<dependency>
+			<groupId>javax.ejb</groupId>
+			<artifactId>javax.ejb</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/javax.ejb.jar</systemPath>
+			<!-- <systemPath>${project.basedir}/libs/javax.ejb.jar</systemPath>-->
+		</dependency>
+		<dependency>
+			<groupId>jms</groupId>
+			<artifactId>jms</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/jms.jar</systemPath>
+			<!-- <systemPath>${project.basedir}/libs/jms.jar</systemPath>-->
+		</dependency>
+		<dependency>
+			<groupId>jndi</groupId>
+			<artifactId>jndi</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/jndi.jar</systemPath>
+			<!-- <systemPath>${project.basedir}/libs/jndi.jar</systemPath>-->
+		</dependency>
+		<dependency>
+			<groupId>nglog4j</groupId>
+			<artifactId>nglog4j</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/nglog4j.jar</systemPath>
+			<!-- <systemPath>${project.basedir}/libs/nglog4j.jar</systemPath>-->
+		</dependency>
+		<dependency>
+			<groupId>NGEjbCallBroker</groupId>
+			<artifactId>NGEjbCallBroker</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/NGEjbCallBroker.jar</systemPath>
+			<!-- <systemPath>${project.basedir}/libs/NGEjbCallBroker.jar</systemPath>-->
+		</dependency>
+		<dependency>
+			<groupId>NGUtility</groupId>
+			<artifactId>NGUtility</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/NGUtility.jar</systemPath>
+			<!-- <systemPath>${project.basedir}/libs/NGUtility.jar</systemPath>-->
+		</dependency>
+		<dependency>
+			<groupId>ojdbc6</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/ojdbc6.jar</systemPath>
+			<!-- <systemPath>${project.basedir}/libs/ojdbc6.jar</systemPath>-->
+		</dependency>
+		<dependency>
+			<groupId>omnishared</groupId>
+			<artifactId>omnishared</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/omnishared.jar</systemPath>
+			<!-- <systemPath>${project.basedir}/libs/omnishared.jar</systemPath>-->
+		</dependency>
+		<dependency>
+			<groupId>SecurityAPI</groupId>
+			<artifactId>SecurityAPI</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/SecurityAPI.jar</systemPath>
+			<!-- <systemPath>${project.basedir}/libs/SecurityAPI.jar</systemPath>-->
+		</dependency>
+		<dependency>
+			<groupId>stubswfscustom</groupId>
+			<artifactId>stubswfscustom</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/stubswfscustom.jar</systemPath>
+			<!-- <systemPath>${project.basedir}/libs/stubswfscustom.jar</systemPath>-->
+		</dependency>
+		<dependency>
+			<groupId>stubwfs</groupId>
+			<artifactId>stubwfs</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/stubwfs.jar</systemPath>
+			<!-- <systemPath>${project.basedir}/libs/stubwfs.jar</systemPath>-->
+		</dependency>
+		<dependency>
+			<groupId>tibjms</groupId>
+			<artifactId>tibjms</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/tibjms.jar</systemPath>
+			<!-- <systemPath>${project.basedir}/libs/tibjms.jar</systemPath>-->
+		</dependency>
+		<dependency>
+			<groupId>WFSClient</groupId>
+			<artifactId>WFSClient</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/WFSClient.jar</systemPath>
+			<!-- <systemPath>${project.basedir}/libs/WFSClient.jar</systemPath>-->
+		</dependency>
+		<dependency>
+			<groupId>WFSShared</groupId>
+			<artifactId>WFSShared</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/WFSShared.jar</systemPath>
+			<!-- <systemPath>${project.basedir}/libs/WFSShared.jar</systemPath>--> 
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>DSCOP_SMSUtility</finalName>
+		<sourceDirectory>src</sourceDirectory>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+		  <resources>
+        <resource>
+            <!--<directory>D:\Workspace\AP2\ADCB\GIT\ADCB\BPM Transformation Journey 2024 Extension\DSCOP\DSCOP_SMS_Utility</directory>-->
+            <directory>${basedir}</directory>
+        </resource>
+	</resources>
+	</build>
+</project>

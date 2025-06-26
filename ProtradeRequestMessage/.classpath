@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry including="**/*.java" kind="src" output="target/classes" path="ejbModule">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_91">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="lib/Admin.jar"/>
+	<classpathentry kind="lib" path="lib/Decryption.jar"/>
+	<classpathentry kind="lib" path="lib/ejb.jar"/>
+	<classpathentry kind="lib" path="lib/ejbclient.jar"/>
+	<classpathentry kind="lib" path="lib/Encryption.jar"/>
+	<classpathentry kind="lib" path="lib/ISPack.jar"/>
+	<classpathentry kind="lib" path="lib/itextpdf-5.5.8.jar"/>
+	<classpathentry kind="lib" path="lib/jdts.jar"/>
+	<classpathentry kind="lib" path="lib/jms.jar"/>
+	<classpathentry kind="lib" path="lib/jndi.jar"/>
+	<classpathentry kind="lib" path="lib/jsoup-1.11.3.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-1.2.14.jar"/>
+	<classpathentry kind="lib" path="lib/NGEjbCallBroker.jar"/>
+	<classpathentry kind="lib" path="lib/NGUtility.jar"/>
+	<classpathentry kind="lib" path="lib/NIPLJ.jar"/>
+	<classpathentry kind="lib" path="lib/nsms.jar"/>
+	<classpathentry kind="lib" path="lib/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="lib/omnishared.jar"/>
+	<classpathentry kind="lib" path="lib/PDFCreation.jar"/>
+	<classpathentry kind="lib" path="lib/SecurityAPI.jar"/>
+	<classpathentry kind="lib" path="lib/stubswfscustom.jar"/>
+	<classpathentry kind="lib" path="lib/stubwfs.jar"/>
+	<classpathentry kind="lib" path="lib/tibjms.jar"/>
+	<classpathentry kind="lib" path="lib/WFSClient.jar"/>
+	<classpathentry kind="lib" path="lib/WFSShared.jar"/>
+	<classpathentry kind="lib" path="lib/xmlworker-5.5.11.jar"/>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/test-classes" path="src/test/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="test" value="true"/>
+			<attribute name="optional" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

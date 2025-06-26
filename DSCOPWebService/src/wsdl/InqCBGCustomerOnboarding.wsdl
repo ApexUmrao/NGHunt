@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by TIBCO WSDL-->
+<wsdl:definitions xmlns:ns1="http://www.adcb.com/esb/common/header.xsd" xmlns:tns="http://xmlns.example.com/1517229627028" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns0="http://www.adcb.com/esb/inq/CustomerDigitalJourney/InqCBGCustomerOnboarding.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="Untitled" targetNamespace="http://xmlns.example.com/1517229627028">
+    <wsdl:types>
+        <xs:schema xmlns="http://www.adcb.com/esb/inq/CustomerDigitalJourney/InqCBGCustomerOnboarding.xsd" xmlns:ns0="http://www.adcb.com/esb/common/header.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.adcb.com/esb/inq/CustomerDigitalJourney/InqCBGCustomerOnboarding.xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+            <xs:import namespace="http://www.adcb.com/esb/common/header.xsd"/>
+            <xs:element name="fetchBPMWorkItemDetailsReqMsg">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:header"/>
+                        <xs:element name="fetchBPMWorkItemDetailsReq">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="serviceMode" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="workItemNumber" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="applicationLanguage" type="xs:string"/>
+                                    <xs:element name="applicationName" type="xs:string"/>
+                                    <xs:element name="applicationStage" type="xs:string"/>
+                                    <xs:element name="deviceIP" type="xs:string"/>
+                                    <xs:element name="deviceID" type="xs:string"/>
+                                    <xs:element name="sourcingCenter" type="xs:string"/>
+                                    <xs:element name="sourcingChannel" type="xs:string"/>
+                                    <xs:element name="applicationAttributes" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="attributeDetails" minOccurs="0" maxOccurs="unbounded">
+                                                    <xs:complexType>
+                                                        <xs:sequence>
+                                                            <xs:element name="attributes" minOccurs="0" maxOccurs="unbounded">
+                                                                <xs:complexType>
+                                                                    <xs:sequence>
+                                                                        <xs:element name="attributeKey" type="xs:string"/>
+                                                                        <xs:element name="attributeValue" type="xs:string"/>
+                                                                    </xs:sequence>
+                                                                </xs:complexType>
+                                                            </xs:element>
+                                                        </xs:sequence>
+                                                    </xs:complexType>
+                                                </xs:element>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="fetchBPMWorkItemDetailsResMsg">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:header"/>
+                        <xs:element name="fetchBPMWorkItemDetailsRes" minOccurs="0">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="sysRefNo" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="workItemNumber" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="applicationLanguage" type="xs:string"/>
+                                    <xs:element name="applicationName" type="xs:string"/>
+                                    <xs:element name="applicationStage" type="xs:string"/>
+                                    <xs:element name="deviceIP" type="xs:string"/>
+                                    <xs:element name="deviceID" type="xs:string"/>
+                                    <xs:element name="sourcingCenter" type="xs:string"/>
+                                    <xs:element name="sourcingChannel" type="xs:string"/>
+                                    <xs:element name="applicationAttributes" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="attributeDetails" minOccurs="0" maxOccurs="unbounded">
+                                                    <xs:complexType>
+                                                        <xs:sequence>
+                                                            <xs:element name="attributes" minOccurs="0" maxOccurs="unbounded">
+                                                                <xs:complexType>
+                                                                    <xs:sequence>
+                                                                        <xs:element name="attributeKey" type="xs:string"/>
+                                                                        <xs:element name="attributeValue" type="xs:string"/>
+                                                                    </xs:sequence>
+                                                                </xs:complexType>
+                                                            </xs:element>
+                                                        </xs:sequence>
+                                                    </xs:complexType>
+                                                </xs:element>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                    <xs:element name="status" type="xs:string"/>
+                                    <xs:element name="reason" type="xs:string"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="fetchCustomerScoreReqMsg">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:header"/>
+                        <xs:element name="fetchCustomerScoreReq">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="inputData" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="scoringType" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="callingAppID" type="xs:string" minOccurs="0"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="fetchCustomerScoreResMsg">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:header"/>
+                        <xs:element name="fetchCustomerScoreRes" minOccurs="0">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="outputData" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="scoringType" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="callingAppID" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="status" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="reason" type="xs:string" minOccurs="0"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="fetchIslamicCommodityDtlsReqMsg">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:header"/>
+                        <xs:element name="fetchIslamicCommodityDtlsReq">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="requestDate" type="xs:string" minOccurs="0"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="fetchIslamicCommodityDtlsResMsg">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:header"/>
+                        <xs:element name="fetchIslamicCommodityDtlsRes" minOccurs="0">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="commodity" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="commodityUnit" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="commodityValue" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="errorCode" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="errorDescription" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="profitRate" type="xs:string" minOccurs="0"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="fetchUserDetailsReqMsg">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:header"/>
+                        <xs:element name="fetchUserDetailsReq">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="eidaCardNumber" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="eidaExpiryDate" type="xs:string" minOccurs="0"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="fetchUserDetailsResMsg">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:header"/>
+                        <xs:element name="fetchUserDetailsRes" minOccurs="0">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="eidaCardNumber" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="eidaExpiryDate" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="userName" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="mobile" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="userType" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="location" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="dateOfBirth" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="status" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="reason" type="xs:string" minOccurs="0"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="validateEmiratesIDReqMsg">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:header"/>
+                        <xs:element name="validateEmiratesIDReq">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="emiratesID" type="xs:string" minOccurs="0"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="validateEmiratesIDResMsg">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:header"/>
+                        <xs:element name="validateEmiratesIDRes" minOccurs="0">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="emiratesID" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="validStatus" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="reason" type="xs:string" minOccurs="0"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="validateUAEDebitCardBINReqMsg">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:header"/>
+                        <xs:element name="validateUAEDebitCardBINReq">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="cardBIN" type="xs:string" minOccurs="0"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="validateUAEDebitCardBINResMsg">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:header"/>
+                        <xs:element name="validateUAEDebitCardBINRes" minOccurs="0">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="FTEligibility" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="cardType" type="xs:string" minOccurs="0"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+        <xs:schema xmlns="http://www.adcb.com/esb/common/header.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.adcb.com/esb/common/header.xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+            <xs:complexType name="headerType">
+                <xs:sequence>
+                    <xs:element name="usecaseID" type="xs:string" minOccurs="0"/>
+                    <xs:element name="serviceName" type="xs:string"/>
+                    <xs:element name="versionNo" type="xs:string"/>
+                    <xs:element name="serviceAction" type="xs:string" minOccurs="0"/>
+                    <xs:element name="correlationID" type="xs:string" minOccurs="0"/>
+                    <xs:element name="sysRefNumber" type="xs:string"/>
+                    <xs:element name="senderID" type="xs:string"/>
+                    <xs:element name="consumer" type="xs:string" minOccurs="0"/>
+                    <xs:element name="reqTimeStamp" type="xs:string"/>
+                    <xs:element name="repTimeStamp" type="xs:string" minOccurs="0"/>
+                    <xs:element name="username" type="xs:string" minOccurs="0"/>
+                    <xs:element name="credentials" type="xs:string" minOccurs="0"/>
+                    <xs:element name="returnCode" type="xs:string" minOccurs="0"/>
+                    <xs:element name="errorDescription" type="xs:string" minOccurs="0"/>
+                    <xs:element name="errorDetail" type="xs:string" minOccurs="0"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="header" type="ns1:headerType"/>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:service name="InqCBGCustomerOnboarding">
+        <wsdl:port name="InqCBGCustomerOnboardingPortTypeEndpoint1" binding="tns:InqCBGCustomerOnboardingPortTypeEndpoint1Binding">
+            <soap:address location="http://10.146.163.71:5543/Services/CustomerDigitalJourney/CustomerDigitalJourneyInqServices/Service/InqCBGCustomerOnboarding.serviceagent/InqCBGCustomerOnboardingPortTypeEndpoint1"/>
+        </wsdl:port>
+    </wsdl:service>
+    <wsdl:portType name="InqCBGCustomerOnboardingPortType">
+        <wsdl:operation name="fetchUserDetails_Oper">
+            <wsdl:input message="tns:fetchUserDetailsInputMessage"/>
+            <wsdl:output message="tns:fetchUserDetailsOutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="fetchBPMWorkItemDetails_Oper">
+            <wsdl:input message="tns:fetchBPMWorkItemDetailsInputMessage"/>
+            <wsdl:output message="tns:fetchBPMWorkItemDetailsOutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="validateUAEDebitCardBIN_Oper">
+            <wsdl:input message="tns:validateUAEDebitCardBINInputMessage"/>
+            <wsdl:output message="tns:validateUAEDebitCardBINOutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="fetchIslamicCommodityDtls_Oper">
+            <wsdl:input message="tns:fetchIslamicCommodityDtlsInputMessage"/>
+            <wsdl:output message="tns:fetchIslamicCommodityDtlsOutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="fetchCustomerScore_Oper">
+            <wsdl:input message="tns:fetchCustomerScoreInputMessage"/>
+            <wsdl:output message="tns:fetchCustomerScoreOutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="validateEmiratesID_Oper">
+            <wsdl:input message="tns:validateEmiratesIDInputMessage"/>
+            <wsdl:output message="tns:validateEmiratesIDOutputMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="InqCBGCustomerOnboardingPortTypeEndpoint1Binding" type="tns:InqCBGCustomerOnboardingPortType">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="fetchUserDetails_Oper">
+            <soap:operation style="document" soapAction="/Services/CustomerDigitalJourney/CustomerDigitalJourneyInqServices/Service/InqCBGCustomerOnboarding.serviceagent//fetchUserDetails_Oper"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="fetchUserDetailsInputMsg"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="fetchUserDetailsOutputMsg"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="fetchBPMWorkItemDetails_Oper">
+            <soap:operation style="document" soapAction="/Services/CustomerDigitalJourney/CustomerDigitalJourneyInqServices/Service/InqCBGCustomerOnboarding.serviceagent//fetchBPMWorkItemDetails_Oper"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="fetchBPMWorkItemDetailsInputMsg"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="fetchBPMWorkItemDetailsInputMessage"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="validateUAEDebitCardBIN_Oper">
+            <soap:operation style="document" soapAction="/Services/CustomerDigitalJourney/CustomerDigitalJourneyInqServices/Service/InqCBGCustomerOnboarding.serviceagent//validateUAEDebitCardBIN_Oper"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="validateUAEDebitCardBINInputMsg"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="validateUAEDebitCardBINOutputMsg"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="fetchIslamicCommodityDtls_Oper">
+            <soap:operation style="document" soapAction="/Services/CustomerDigitalJourney/CustomerDigitalJourneyInqServices/Service/InqCBGCustomerOnboarding.serviceagent//fetchIslamicCommodityDtls_Oper"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="fetchIslamicCommodityDtlsInputMsg"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="fetchIslamicCommodityDtlsOutputMsg"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="fetchCustomerScore_Oper">
+            <soap:operation style="document" soapAction="/Services/CustomerDigitalJourney/CustomerDigitalJourneyInqServices/Service/InqCBGCustomerOnboarding.serviceagent//fetchCustomerScore_Oper"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="fetchCustomerScoreInputMsg"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="fetchCustomerScoreOutputMsg"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="validateEmiratesID_Oper">
+            <soap:operation style="document" soapAction="/Services/CustomerDigitalJourney/CustomerDigitalJourneyInqServices/Service/InqCBGCustomerOnboarding.serviceagent/InqCBGCustomerOnboardingPortTypeEndpoint1/validateEmiratesID_Oper"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="validateEmiratesIDInputMsg"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="validateEmiratesIDOutputMsg"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:message name="fetchUserDetailsInputMessage">
+        <wsdl:part name="fetchUserDetailsInputMsg" element="ns0:fetchUserDetailsReqMsg"/>
+    </wsdl:message>
+    <wsdl:message name="fetchUserDetailsOutputMessage">
+        <wsdl:part name="fetchUserDetailsOutputMsg" element="ns0:fetchUserDetailsResMsg"/>
+    </wsdl:message>
+    <wsdl:message name="fetchBPMWorkItemDetailsInputMessage">
+        <wsdl:part name="fetchBPMWorkItemDetailsInputMsg" element="ns0:fetchBPMWorkItemDetailsReqMsg"/>
+    </wsdl:message>
+    <wsdl:message name="fetchBPMWorkItemDetailsOutputMessage">
+        <wsdl:part name="fetchBPMWorkItemDetailsInputMessage" element="ns0:fetchBPMWorkItemDetailsResMsg"/>
+    </wsdl:message>
+    <wsdl:message name="validateUAEDebitCardBINInputMessage">
+        <wsdl:part name="validateUAEDebitCardBINInputMsg" element="ns0:validateUAEDebitCardBINReqMsg"/>
+    </wsdl:message>
+    <wsdl:message name="validateUAEDebitCardBINOutputMessage">
+        <wsdl:part name="validateUAEDebitCardBINOutputMsg" element="ns0:validateUAEDebitCardBINResMsg"/>
+    </wsdl:message>
+    <wsdl:message name="fetchIslamicCommodityDtlsInputMessage">
+        <wsdl:part name="fetchIslamicCommodityDtlsInputMsg" element="ns0:fetchIslamicCommodityDtlsReqMsg"/>
+    </wsdl:message>
+    <wsdl:message name="fetchIslamicCommodityDtlsOutputMessage">
+        <wsdl:part name="fetchIslamicCommodityDtlsOutputMsg" element="ns0:fetchIslamicCommodityDtlsResMsg"/>
+    </wsdl:message>
+    <wsdl:message name="fetchCustomerScoreInputMessage">
+        <wsdl:part name="fetchCustomerScoreInputMsg" element="ns0:fetchCustomerScoreReqMsg"/>
+    </wsdl:message>
+    <wsdl:message name="fetchCustomerScoreOutputMessage">
+        <wsdl:part name="fetchCustomerScoreOutputMsg" element="ns0:fetchCustomerScoreResMsg"/>
+    </wsdl:message>
+    <wsdl:message name="validateEmiratesIDInputMessage">
+        <wsdl:part name="validateEmiratesIDInputMsg" element="ns0:validateEmiratesIDReqMsg"/>
+    </wsdl:message>
+    <wsdl:message name="validateEmiratesIDOutputMessage">
+        <wsdl:part name="validateEmiratesIDOutputMsg" element="ns0:validateEmiratesIDResMsg"/>
+    </wsdl:message>
+</wsdl:definitions>

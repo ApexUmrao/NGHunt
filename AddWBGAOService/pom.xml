@@ -1,0 +1,197 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>AddWBGAOService</groupId>
+  <artifactId>AddWBGAOService</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <build>
+   <finalName>AddWBGAOService</finalName>
+    <sourceDirectory>src</sourceDirectory>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+	  <plugin>
+            <groupId>org.sonarsource.scanner.maven</groupId>
+            <artifactId>sonar-maven-plugin</artifactId>
+            <version>4.0.0.4121</version>
+        </plugin>
+    </plugins>
+	<resources>
+        <resource>
+            <!--<directory>D:\Workspace\AP2\ADCB\GIT\ADCB\BPM Transformation Journey 2024 Extension\CBG\cbg_single_hook</directory>-->
+            <directory>${basedir}</directory>
+            <includes>
+                <include>services.xml</include>
+            </includes>
+            <targetPath>META-INF</targetPath>
+        </resource>
+	</resources>
+  </build>
+<dependencies>
+<dependency>
+	<groupId>Admin</groupId>
+	<artifactId>Admin</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/Admin.jar</systemPath>
+	<!--<systemPath>D:/Lib/Admin.jar</systemPath> -->
+</dependency>
+<dependency>
+	<groupId>axiom-api-1.2.19</groupId>
+	<artifactId>axiom-api-1.2.19</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/axiom-api-1.2.19.jar</systemPath>
+	<!--<systemPath>D:/Lib/axiom-api-1.2.19.jar</systemPath> -->
+</dependency>
+<dependency>
+	<groupId>axis</groupId>
+	<artifactId>axis</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/axis.jar</systemPath>
+	<!--<systemPath>D:/Lib/axis.jar</systemPath> -->
+</dependency>
+<dependency>
+	<groupId>axis2-kernel-1.7.3</groupId>
+	<artifactId>axis2-kernel-1.7.3</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/axis2-kernel-1.7.3.jar</systemPath>
+	<!--<systemPath>D:/Lib/axis2-kernel-1.7.3.jar</systemPath> -->
+</dependency>
+<dependency>
+	<groupId>EIDA_IDCard_Applet</groupId>
+	<artifactId>EIDA_IDCard_Applet</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/EIDA_IDCard_Applet.jar</systemPath>
+	<!--<systemPath>D:/Lib/EIDA_IDCard_Applet.jar</systemPath> -->
+</dependency>
+<dependency>
+	<groupId>javax.servlet-3.0</groupId>
+	<artifactId>javax.servlet-3.0</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/javax.servlet-3.0.jar</systemPath>
+	<!--<systemPath>D:/Lib/javax.servlet-3.0.jar</systemPath> -->
+</dependency>
+<dependency>
+	<groupId>jce</groupId>
+	<artifactId>jce</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/jce.jar</systemPath>
+	<!--<systemPath>D:/Lib/jce.jar</systemPath> -->
+</dependency>
+<dependency>
+	<groupId>log4j-1.2.15</groupId>
+	<artifactId>log4j-1.2.15</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/log4j-1.2.15.jar</systemPath>
+	<!--<systemPath>D:/Lib/log4j-1.2.15.jar</systemPath> -->
+</dependency>
+<dependency>
+	<groupId>NGEjbCallBroker</groupId>
+	<artifactId>NGEjbCallBroker</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/NGEjbCallBroker.jar</systemPath>
+	<!--<systemPath>D:/Lib/NGEjbCallBroker.jar</systemPath> -->
+</dependency>
+<dependency>
+	<groupId>ngfrmbld</groupId>
+	<artifactId>ngfrmbld</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/ngfrmbld.jar</systemPath>
+	<!--<systemPath>D:/Lib/ngfrmbld.jar</systemPath> -->
+</dependency>
+<dependency>
+	<groupId>ojdbc6</groupId>
+	<artifactId>ojdbc6</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/ojdbc6.jar</systemPath>
+	<!--<systemPath>D:/Lib/ojdbc6.jar</systemPath> -->
+</dependency>
+<dependency>
+	<groupId>omnishared</groupId>
+	<artifactId>omnishared</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/omnishared.jar</systemPath>
+	<!--<systemPath>D:/Lib/omnishared.jar</systemPath> -->
+</dependency>
+<dependency>
+	<groupId>rt</groupId>
+	<artifactId>rt</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/rt.jar</systemPath>
+	<!--<systemPath>D:/Lib/rt.jar</systemPath> -->
+</dependency>
+<dependency>
+	<groupId>SecurityAPI</groupId>
+	<artifactId>SecurityAPI</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/SecurityAPI.jar</systemPath>
+	<!--<systemPath>D:/Lib/SecurityAPI.jar</systemPath> -->
+</dependency>
+<dependency>
+	<groupId>wfdesktop</groupId>
+	<artifactId>wfdesktop</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/wfdesktop.jar</systemPath>
+	<!--<systemPath>D:/Lib/wfdesktop.jar</systemPath> -->
+</dependency>
+<dependency>
+	<groupId>javassist-3.24.1-GA</groupId>
+	<artifactId>javassist-3.24.1-GA</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/javassist-3.24.1-GA.jar</systemPath>
+	<!--<systemPath>D:/Lib/javassist-3.24.1-GA.jar</systemPath> -->
+</dependency>
+<dependency>
+	<groupId>mockito-all-1.10.19</groupId>
+	<artifactId>mockito-all-1.10.19</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/mockito-all-1.10.19.jar</systemPath>
+	<!--<systemPath>D:/Lib/mockito-all-1.10.19.jar</systemPath> -->
+</dependency>
+<dependency>
+	<groupId>mockito-core-1.10.19</groupId>
+	<artifactId>mockito-core-1.10.19</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/mockito-core-1.10.19.jar</systemPath>
+	<!--<systemPath>D:/Lib/mockito-core-1.10.19.jar</systemPath> -->
+</dependency>
+<dependency>
+	<groupId>powermock-mockito-1.6.4-full</groupId>
+	<artifactId>powermock-mockito-1.6.4-full</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/powermock-mockito-1.6.4-full.jar</systemPath>
+	<!--<systemPath>D:/Lib/powermock-mockito-1.6.4-full.jar</systemPath> -->
+</dependency>
+<dependency>
+	<groupId>junit-4.12</groupId>
+	<artifactId>junit-4.12</artifactId>
+	<version>1.0.0</version>
+	<scope>system</scope>
+	<systemPath>${basedir}/lib/junit-4.12.jar</systemPath>
+	<!--<systemPath>D:/Lib/junit-4.12.jar</systemPath> -->
+</dependency>
+</dependencies>
+</project>

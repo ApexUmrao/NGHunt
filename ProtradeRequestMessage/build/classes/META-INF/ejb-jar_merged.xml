@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><ejb-jar id="ejb-jar_ID" version="3.1" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/ejb-jar_3_1.xsd">
+    <display-name>ProtradeRequestMessage</display-name>
+    <enterprise-beans>
+        <message-driven>
+            <ejb-name>ProtradeRequestMessage</ejb-name>
+            <ejb-class>com.newgen.push.message.RequestMessage</ejb-class>
+            <messaging-type>javax.jms.MessageListener</messaging-type>
+            <transaction-type>Bean</transaction-type>
+            <resource-ref>
+                <res-ref-name>jms/tf_protrade_2_wms</res-ref-name>
+                <res-type>javax.jms.QueueConnectionFactory</res-type>
+                <res-auth>Application</res-auth>
+                <res-sharing-scope>Shareable</res-sharing-scope>
+            </resource-ref>
+        </message-driven>
+    </enterprise-beans>
+    <assembly-descriptor/>
+</ejb-jar>

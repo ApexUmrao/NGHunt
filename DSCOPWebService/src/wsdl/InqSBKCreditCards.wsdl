@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by TIBCO WSDL-->
+<wsdl:definitions xmlns:ns1="http://www.adcb.com/esb/common/header.xsd" xmlns:tns="http://xmlns.example.com/1450347844186" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns0="http://www.adcb.com/esb/inq/SmartKioskInqServices/InqSBKCreditCards.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="Untitled" targetNamespace="http://xmlns.example.com/1450347844186">
+    <wsdl:types>
+        <xs:schema xmlns="http://www.adcb.com/esb/inq/SmartKioskInqServices/InqSBKCreditCards.xsd" xmlns:ns0="http://www.adcb.com/esb/common/header.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.adcb.com/esb/inq/SmartKioskInqServices/InqSBKCreditCards.xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+            <xs:import namespace="http://www.adcb.com/esb/common/header.xsd"/>
+            <xs:element name="getCreditCardPrintStatusReqMsg">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:header"/>
+                        <xs:element name="getCreditCardPrintStatusReq">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="customerID" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="creditCardNumber" type="xs:string" minOccurs="0"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getCreditCardPrintStatusResMsg">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:header"/>
+                        <xs:element name="getCreditCardPrintStatusRes" minOccurs="0">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="customerID" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="creditCardNumber" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="creditCardDetails" minOccurs="0">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="creditCards" minOccurs="0" maxOccurs="unbounded">
+                                                    <xs:complexType>
+                                                        <xs:sequence>
+                                                            <xs:element name="cardNumber" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="cardLogo" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="cardTypeDescription" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="embossName" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="primSuppFlag" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="expiryDate" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="issueDate" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="fourthLineEmbossing" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="serviceCode" type="xs:string" minOccurs="0"/>
+                                                        </xs:sequence>
+                                                    </xs:complexType>
+                                                </xs:element>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getKioskListReqMsg">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:header"/>
+                        <xs:element name="getKioskListReq">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="creditCardBIN" type="xs:string" minOccurs="0"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getKioskListResMsg">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:header"/>
+                        <xs:element name="getKioskListRes" minOccurs="0">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="creditCardBIN" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="kioskDetails" minOccurs="0">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="kiosks" minOccurs="0" maxOccurs="unbounded">
+                                                    <xs:complexType>
+                                                        <xs:sequence>
+                                                            <xs:element name="kioskID" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="kioskDesc" type="xs:string" minOccurs="0"/>
+                                                            <xs:element name="location" type="xs:string" minOccurs="0"/>
+                                                        </xs:sequence>
+                                                    </xs:complexType>
+                                                </xs:element>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+        <xs:schema xmlns="http://www.adcb.com/esb/common/header.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.adcb.com/esb/common/header.xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+            <xs:complexType name="headerType">
+                <xs:sequence>
+                    <xs:element name="usecaseID" type="xs:string" minOccurs="0"/>
+                    <xs:element name="serviceName" type="xs:string"/>
+                    <xs:element name="versionNo" type="xs:string"/>
+                    <xs:element name="serviceAction" type="xs:string" minOccurs="0"/>
+                    <xs:element name="correlationID" type="xs:string" minOccurs="0"/>
+                    <xs:element name="sysRefNumber" type="xs:string"/>
+                    <xs:element name="senderID" type="xs:string"/>
+                    <xs:element name="consumer" type="xs:string" minOccurs="0"/>
+                    <xs:element name="reqTimeStamp" type="xs:string"/>
+                    <xs:element name="repTimeStamp" type="xs:string" minOccurs="0"/>
+                    <xs:element name="username" type="xs:string" minOccurs="0"/>
+                    <xs:element name="credentials" type="xs:string" minOccurs="0"/>
+                    <xs:element name="returnCode" type="xs:string" minOccurs="0"/>
+                    <xs:element name="errorDescription" type="xs:string" minOccurs="0"/>
+                    <xs:element name="errorDetail" type="xs:string" minOccurs="0"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="header" type="ns1:headerType"/>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:service name="InqSBKCreditCards">
+        <wsdl:port name="InqSBKCreditCardsPortTypeEndpoint0" binding="tns:InqSBKCreditCardsPortTypeEndpoint0Binding">
+            <soap:address location="http://10.101.107.21:5538/Services/SmartKioskServices/SmartKioskInquiryServices/Service/InqSBKCreditCards.serviceagent/InqSBKCreditCardsPortTypeEndpoint0"/>
+        </wsdl:port>
+    </wsdl:service>
+    <wsdl:portType name="InqSBKCreditCardsPortType">
+        <wsdl:operation name="getKioskList_Oper">
+            <wsdl:input message="tns:getKioskListInputMessage"/>
+            <wsdl:output message="tns:getKioskListOutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="getCreditCardPrintStatus_Oper">
+            <wsdl:input message="tns:getCreditCardPrintStatusInputMessage"/>
+            <wsdl:output message="tns:getCreditCardPrintStatusOutputMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="InqSBKCreditCardsPortTypeEndpoint0Binding" type="tns:InqSBKCreditCardsPortType">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="getKioskList_Oper">
+            <soap:operation style="document" soapAction="/Services/SmartKioskServices/SmartKioskInquiryServices/Service/InqSBKCreditCards.serviceagent/InqSBKCreditCardsPortTypeEndpoint0/getKioskList_Oper"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="getKioskListInputMsg"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="getKioskListOutputMsg"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getCreditCardPrintStatus_Oper">
+            <soap:operation style="document" soapAction="/Services/SmartKioskServices/SmartKioskInquiryServices/Service/InqSBKCreditCards.serviceagent/InqSBKCreditCardsPortTypeEndpoint0/getCreditCardPrintStatus_Oper"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="getCreditCardPrintStatusInputMsg"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="getCreditCardPrintStatusOutputMsg"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:message name="getKioskListInputMessage">
+        <wsdl:part name="getKioskListInputMsg" element="ns0:getKioskListReqMsg"/>
+    </wsdl:message>
+    <wsdl:message name="getKioskListOutputMessage">
+        <wsdl:part name="getKioskListOutputMsg" element="ns0:getKioskListResMsg"/>
+    </wsdl:message>
+    <wsdl:message name="getCreditCardPrintStatusInputMessage">
+        <wsdl:part name="getCreditCardPrintStatusInputMsg" element="ns0:getCreditCardPrintStatusReqMsg"/>
+    </wsdl:message>
+    <wsdl:message name="getCreditCardPrintStatusOutputMessage">
+        <wsdl:part name="getCreditCardPrintStatusOutputMsg" element="ns0:getCreditCardPrintStatusResMsg"/>
+    </wsdl:message>
+</wsdl:definitions>

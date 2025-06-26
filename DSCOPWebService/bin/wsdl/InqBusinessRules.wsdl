@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by TIBCO WSDL-->
+<wsdl:definitions xmlns:ns1="http://www.adcb.com/esb/common/header.xsd" xmlns:tns="http://xmlns.example.com/1519734941541" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns0="http://www.adcb.com/esb/inq/CustomerDigitalJourney/InqBusinessRules.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="Untitled" targetNamespace="http://xmlns.example.com/1519734941541">
+    <wsdl:types>
+        <xs:schema xmlns="http://www.adcb.com/esb/common/header.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.adcb.com/esb/common/header.xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+            <xs:complexType name="headerType">
+                <xs:sequence>
+                    <xs:element name="usecaseID" type="xs:string" minOccurs="0"/>
+                    <xs:element name="serviceName" type="xs:string"/>
+                    <xs:element name="versionNo" type="xs:string"/>
+                    <xs:element name="serviceAction" type="xs:string" minOccurs="0"/>
+                    <xs:element name="correlationID" type="xs:string" minOccurs="0"/>
+                    <xs:element name="sysRefNumber" type="xs:string"/>
+                    <xs:element name="senderID" type="xs:string"/>
+                    <xs:element name="consumer" type="xs:string" minOccurs="0"/>
+                    <xs:element name="reqTimeStamp" type="xs:string"/>
+                    <xs:element name="repTimeStamp" type="xs:string" minOccurs="0"/>
+                    <xs:element name="username" type="xs:string" minOccurs="0"/>
+                    <xs:element name="credentials" type="xs:string" minOccurs="0"/>
+                    <xs:element name="returnCode" type="xs:string" minOccurs="0"/>
+                    <xs:element name="errorDescription" type="xs:string" minOccurs="0"/>
+                    <xs:element name="errorDetail" type="xs:string" minOccurs="0"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="header" type="ns1:headerType"/>
+        </xs:schema>
+        <xs:schema xmlns="http://www.adcb.com/esb/inq/CustomerDigitalJourney/InqBusinessRules.xsd" xmlns:ns0="http://www.adcb.com/esb/common/header.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.adcb.com/esb/inq/CustomerDigitalJourney/InqBusinessRules.xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+            <xs:import namespace="http://www.adcb.com/esb/common/header.xsd"/>
+            <xs:element name="InqBusinessRulesReqMsg">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:header"/>
+                        <xs:element name="InqBusinessRulesReq">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="ruleFlowGroup" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="requestChannelName" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="ruleInputData" type="xs:string" minOccurs="0"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="InqBusinessRulesResMsg">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:header"/>
+                        <xs:element name="InqBusinessRulesRes" minOccurs="0">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="ruleFlowGroup" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="requestChannelName" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="ruleOutputData" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="status" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="reason" type="xs:string" minOccurs="0"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:service name="InqBusinessRules">
+        <wsdl:port name="InqBusinessRulesPortTypeEndpoint1" binding="tns:InqBusinessRulesPortTypeEndpoint1Binding">
+            <soap:address location="http://10.146.163.71:5543/Services/CustomerDigitalJourney/CustomerDigitalJourneyInqServices/Service/InqBusinessRules.serviceagent/InqBusinessRulesPortTypeEndpoint1"/>
+        </wsdl:port>
+    </wsdl:service>
+    <wsdl:portType name="InqBusinessRulesPortType">
+        <wsdl:operation name="InqBusinessRules_Oper">
+            <wsdl:input message="tns:InqBusinessRulesInputMessage"/>
+            <wsdl:output message="tns:InqBusinessRulesOutputMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="InqBusinessRulesPortTypeEndpoint1Binding" type="tns:InqBusinessRulesPortType">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="InqBusinessRules_Oper">
+            <soap:operation style="document" soapAction="/Services/CustomerDigitalJourney/CustomerDigitalJourneyInqServices/Service/InqBusinessRules.serviceagent//InqBusinessRules_Oper"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="InqBusinessRulesInputMessage"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="InqBusinessRulesOutputMessage"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:message name="InqBusinessRulesInputMessage">
+        <wsdl:part name="InqBusinessRulesInputMessage" element="ns0:InqBusinessRulesReqMsg"/>
+    </wsdl:message>
+    <wsdl:message name="InqBusinessRulesOutputMessage">
+        <wsdl:part name="InqBusinessRulesOutputMessage" element="ns0:InqBusinessRulesResMsg"/>
+    </wsdl:message>
+</wsdl:definitions>

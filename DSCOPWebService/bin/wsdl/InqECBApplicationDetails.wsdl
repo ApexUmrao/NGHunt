@@ -1,0 +1,915 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by TIBCO WSDL-->
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://xmlns.example.com/1485845188428" xmlns:ns0="http://www.adcb.com/esb/inq/ExternalSrvsInq/InqECBApplicationDetails.xsd" xmlns:ns2="http://schemas.datacontract.org/2004/07/ADCB.AECB.EnquirySystem.API.Common.DTO.ECB_Common" xmlns:ns1="http://www.adcb.com/esb/common/header.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="Untitled" targetNamespace="http://xmlns.example.com/1485845188428">
+  <wsdl:types>
+    <xs:schema xmlns="http://www.adcb.com/esb/inq/ExternalSrvsInq/InqECBApplicationDetails.xsd" xmlns:tns="http://schemas.datacontract.org/2004/07/ADCB.AECB.EnquirySystem.API.Common.DTO.ECB_Common" xmlns:ns0="http://www.adcb.com/esb/common/header.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.adcb.com/esb/inq/ExternalSrvsInq/InqECBApplicationDetails.xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+      <xs:import namespace="http://www.adcb.com/esb/common/header.xsd"/>
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/ADCB.AECB.EnquirySystem.API.Common.DTO.ECB_Common"/>
+      <xs:element name="fetchAdditonalApplicationDtlsReqMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="ns0:header"/>
+            <xs:element name="fetchAdditonalApplicationDtlsReq">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element ref="ECBRequestHeader" minOccurs="0"/>
+                  <xs:element ref="ECBRequestBody" minOccurs="0"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="fetchAdditonalApplicationDtlsResMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="ns0:header"/>
+            <xs:element name="fetchAdditonalApplicationDtlsRes" minOccurs="0">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element ref="ECBResponseHeader" minOccurs="0"/>
+                  <xs:element ref="ECBResponseBody" minOccurs="0"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="fetchApplicationUpdateDtlsReqMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="ns0:header"/>
+            <xs:element name="fetchApplicationUpdateDtlsReq">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element ref="ECBRequestHeader" minOccurs="0"/>
+                  <xs:element ref="ECBRequestBody" minOccurs="0"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="fetchApplicationUpdateDtlsResMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="ns0:header"/>
+            <xs:element name="fetchApplicationUpdateDtlsRes" minOccurs="0">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element ref="ECBResponseHeader" minOccurs="0"/>
+                  <xs:element ref="ECBResponseBody" minOccurs="0"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="fetchECBReportDtlsReqMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="ns0:header"/>
+            <xs:element name="fetchECBReportDtlsReq">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="AU" minOccurs="0">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="Status" type="xs:string" minOccurs="0"/>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="Channel" type="xs:string" minOccurs="0"/>
+                  <xs:element name="ConsentFlag" type="xs:string" minOccurs="0"/>
+                  <xs:element name="ContractType" type="xs:string" minOccurs="0"/>
+                  <xs:element name="ECBRequestType" type="xs:string" minOccurs="0"/>
+                  <xs:element name="EnquiryType" type="xs:string" minOccurs="0"/>
+                  <xs:element name="LocalDBSearchReq" type="xs:string" minOccurs="0"/>
+                  <xs:element name="NAE" minOccurs="0">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="Company" minOccurs="0">
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:element name="PrimaryMobileNo" type="xs:string" minOccurs="0"/>
+                              <xs:element name="TradeLicense" minOccurs="0">
+                                <xs:complexType>
+                                  <xs:sequence>
+                                    <xs:element name="Number" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="RegistrationPlace" type="xs:string" minOccurs="0"/>
+                                  </xs:sequence>
+                                </xs:complexType>
+                              </xs:element>
+                              <xs:element name="TradeName" type="xs:string" minOccurs="0"/>
+                            </xs:sequence>
+                          </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Individual" minOccurs="0">
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:element name="DOB" type="xs:string" minOccurs="0"/>
+                              <xs:element name="EmiratesId" type="xs:string" minOccurs="0"/>
+                              <xs:element name="FullName" type="xs:string" minOccurs="0"/>
+                              <xs:element name="Gender" type="xs:string" minOccurs="0"/>
+                              <xs:element name="Nationality" type="xs:string" minOccurs="0"/>
+                              <xs:element name="Passport" type="xs:string" minOccurs="0"/>
+                              <xs:element name="PassportExpiryDate" type="xs:string" minOccurs="0"/>
+                              <xs:element name="PreviousPassport" minOccurs="0">
+                                <xs:complexType>
+                                  <xs:sequence>
+                                    <xs:element name="Passport1" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="Passport2" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="Passport3" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="Passport4" type="xs:string" minOccurs="0"/>
+                                  </xs:sequence>
+                                </xs:complexType>
+                              </xs:element>
+                              <xs:element name="PrimaryMobileNo" type="xs:string" minOccurs="0"/>
+                            </xs:sequence>
+                          </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Installment" minOccurs="0">
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:element name="NoOfInstallments" type="xs:string" minOccurs="0"/>
+                              <xs:element name="TotalAmount" type="xs:string" minOccurs="0"/>
+                            </xs:sequence>
+                          </xs:complexType>
+                        </xs:element>
+                        <xs:element name="NotInstallment" minOccurs="0">
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:element name="CreditLimit" type="xs:string" minOccurs="0"/>
+                            </xs:sequence>
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="ReferenceNumber" type="xs:string" minOccurs="0"/>
+                  <xs:element name="ReportType" type="xs:string" minOccurs="0"/>
+                  <xs:element name="Role" type="xs:string" minOccurs="0"/>
+                  <xs:element name="UserID" type="xs:string" minOccurs="0"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="fetchECBReportDtlsResMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="ns0:header"/>
+            <xs:element name="fetchECBReportDtlsRes" minOccurs="0">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="CBContractId" type="xs:string" minOccurs="0"/>
+                  <xs:element name="CBSubjectId" type="xs:string" minOccurs="0"/>
+                  <xs:element name="ChannelID" type="xs:string" minOccurs="0"/>
+                  <xs:element name="ECBFullResponse" type="xs:string" minOccurs="0"/>
+                  <xs:element name="EmploymentStatus" minOccurs="0">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="DateOfEmployment" type="xs:string" minOccurs="0"/>
+                        <xs:element name="DateOfTermination" type="xs:string" minOccurs="0"/>
+                        <xs:element name="DateOfLastUpdate" type="xs:string" minOccurs="0"/>
+                        <xs:element name="EmpName" type="xs:string" minOccurs="0"/>
+                        <xs:element name="EmpType" type="xs:string" minOccurs="0"/>
+                        <xs:element name="GrossAnnualIncome" type="xs:string" minOccurs="0"/>
+                        <xs:element name="ProviderNo" type="xs:string" minOccurs="0"/>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="ErrorCode" type="xs:string" minOccurs="0"/>
+                  <xs:element name="ErrorDesc" type="xs:string" minOccurs="0"/>
+                  <xs:element name="FinancialDetails" minOccurs="0">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="DBR" minOccurs="0">
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:element name="External" minOccurs="0">
+                                <xs:complexType>
+                                  <xs:sequence>
+                                    <xs:element name="SumOf5PERCC" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="SumOfEMIOfAllActiveLoans" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="SumOfEMIOfAllActiveOD" type="xs:string" minOccurs="0"/>
+                                  </xs:sequence>
+                                </xs:complexType>
+                              </xs:element>
+                              <xs:element name="Internal" minOccurs="0">
+                                <xs:complexType>
+                                  <xs:sequence>
+                                    <xs:element name="SumOf5PerCC" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="SumOfEMIOfAllActiveLoans" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="SumOfEMIOfAllActiveOD" type="xs:string" minOccurs="0"/>
+                                  </xs:sequence>
+                                </xs:complexType>
+                              </xs:element>
+                            </xs:sequence>
+                          </xs:complexType>
+                        </xs:element>
+                        <xs:element name="NoOfBounceChequeTotal" type="xs:string" minOccurs="0"/>
+                        <xs:element name="NoOfBounceChequeLast90Days" type="xs:string" minOccurs="0"/>
+                        <xs:element name="NoOf30dpdInLast6Months" type="xs:string" minOccurs="0"/>
+                        <xs:element name="NoOf60dpdInLast12Months" type="xs:string" minOccurs="0"/>
+                        <xs:element name="NoOf90dpd" type="xs:string" minOccurs="0"/>
+                        <xs:element name="NumberOfEnquiry" type="xs:string" minOccurs="0"/>
+                        <xs:element name="OldestContractStartDate" type="xs:string" minOccurs="0"/>
+                        <xs:element name="RestructureActivePILWithTenorGreaterThen48Mnths" type="xs:string" minOccurs="0"/>
+                        <xs:element name="Summary" minOccurs="0">
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:element name="Card" minOccurs="0">
+                                <xs:complexType>
+                                  <xs:sequence>
+                                    <xs:element name="NoActiveContract" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="TotalCreditLimit" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="TotalOutstandingBalanceAmount" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="TotalOverdueAmount" type="xs:string" minOccurs="0"/>
+                                  </xs:sequence>
+                                </xs:complexType>
+                              </xs:element>
+                              <xs:element name="Loan" minOccurs="0">
+                                <xs:complexType>
+                                  <xs:sequence>
+                                    <xs:element name="NoActiveContract" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="TotalMonthlyInstalmentsAmount" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="TotalOutstandingBalanceAmount" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="TotalOverdueAmount" type="xs:string" minOccurs="0"/>
+                                  </xs:sequence>
+                                </xs:complexType>
+                              </xs:element>
+                              <xs:element name="OD" minOccurs="0">
+                                <xs:complexType>
+                                  <xs:sequence>
+                                    <xs:element name="NoActiveContract" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="TotalCreditLimit" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="TotalOutstandingBalanceAmount" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="TotalOverdueAmount" type="xs:string" minOccurs="0"/>
+                                  </xs:sequence>
+                                </xs:complexType>
+                              </xs:element>
+                              <xs:element name="Services" minOccurs="0">
+                                <xs:complexType>
+                                  <xs:sequence>
+                                    <xs:element name="NoActiveContract" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="TotalCreditLimit" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="TotalOutstandingBalanceAmount" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="TotalOverdueAmount" type="xs:string" minOccurs="0"/>
+                                  </xs:sequence>
+                                </xs:complexType>
+                              </xs:element>
+                            </xs:sequence>
+                          </xs:complexType>
+                        </xs:element>
+                        <xs:element name="TotalOutstandingBalance" type="xs:string" minOccurs="0"/>
+                        <xs:element name="TotalOverdueAmount" type="xs:string" minOccurs="0"/>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="HitNoHit" type="xs:string" minOccurs="0"/>
+                  <xs:element name="PersonalDetails" minOccurs="0">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="Company" minOccurs="0">
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:element name="Address" minOccurs="0">
+                                <xs:complexType>
+                                  <xs:sequence>
+                                    <xs:element name="ADRDetails" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="DateLastUpdated" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="Emirates" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="POBox" type="xs:string" minOccurs="0"/>
+                                  </xs:sequence>
+                                </xs:complexType>
+                              </xs:element>
+                              <xs:element name="CompanyName" type="xs:string" minOccurs="0"/>
+                              <xs:element name="CompanyNameAR" type="xs:string" minOccurs="0"/>
+                              <xs:element name="Contact" minOccurs="0">
+                                <xs:complexType>
+                                  <xs:sequence>
+                                    <xs:element name="EmailID" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="MobileNumber" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="PhoneNumber" type="xs:string" minOccurs="0"/>
+                                  </xs:sequence>
+                                </xs:complexType>
+                              </xs:element>
+                              <xs:element name="RegistrationDate" type="xs:string" minOccurs="0"/>
+                              <xs:element name="TradeLicenseNumber" type="xs:string" minOccurs="0"/>
+                              <xs:element name="TradeLicensePlace" type="xs:string" minOccurs="0"/>
+                            </xs:sequence>
+                          </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Individual" minOccurs="0">
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:element name="Address" minOccurs="0">
+                                <xs:complexType>
+                                  <xs:sequence>
+                                    <xs:element name="ADRDetails" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="DateLastUpdated" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="Emirates" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="POBox" type="xs:string" minOccurs="0"/>
+                                  </xs:sequence>
+                                </xs:complexType>
+                              </xs:element>
+                              <xs:element name="Contact" minOccurs="0">
+                                <xs:complexType>
+                                  <xs:sequence>
+                                    <xs:element name="EmailID" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="MobileNumber" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="PhoneNumber" type="xs:string" minOccurs="0"/>
+                                  </xs:sequence>
+                                </xs:complexType>
+                              </xs:element>
+                              <xs:element name="DateOfBirth" type="xs:string" minOccurs="0"/>
+                              <xs:element name="EIDA" type="xs:string" minOccurs="0"/>
+                              <xs:element name="FullName" type="xs:string" minOccurs="0"/>
+                              <xs:element name="FullNameAR" type="xs:string" minOccurs="0"/>
+                              <xs:element name="Nationality" type="xs:string" minOccurs="0"/>
+                              <xs:element name="Passport" type="xs:string" minOccurs="0"/>
+                              <xs:element name="ResidentFlag" type="xs:string" minOccurs="0"/>
+                              <xs:element name="Title" type="xs:string" minOccurs="0"/>
+                            </xs:sequence>
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="ProviderSubjectNumber" type="xs:string" minOccurs="0"/>
+                  <xs:element name="ReferenceNumber" type="xs:string" minOccurs="0"/>
+                  <xs:element name="ReportSource" type="xs:string" minOccurs="0"/>
+                  <xs:element name="ReportType" type="xs:string" minOccurs="0"/>
+                  <xs:element name="Score" type="xs:string" minOccurs="0"/>
+                  <xs:element name="ScoreRange" type="xs:string" minOccurs="0"/>
+                  <xs:element name="Status" type="xs:string" minOccurs="0"/>
+                  <xs:element name="worstCurrentPaymentDelay" type="xs:string" minOccurs="0"/>
+                  <xs:element name="lastChequeBouncedDate" type="xs:string" minOccurs="0"/>
+                  <xs:element name="noOf60PlusDPDInHistory" type="xs:string" minOccurs="0"/>
+                  <xs:element name="noOfRestructureLoanInLast24Months" type="xs:string" minOccurs="0"/>
+                  <xs:element name="noOfChequeBounceInLast12Months" type="xs:string" minOccurs="0"/>
+                  <xs:element name="latestRestructuredDate" type="xs:string" minOccurs="0"/>
+                  <xs:element name="oldPassportNos" type="xs:string" minOccurs="0"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="fetchMonitoringDtlsReqMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="ns0:header"/>
+            <xs:element name="fetchMonitoringDtlsReq">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element ref="ECBRequestHeader" minOccurs="0"/>
+                  <xs:element ref="ECBRequestBody" minOccurs="0"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="fetchMonitoringDtlsResMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="ns0:header"/>
+            <xs:element name="fetchMonitoringDtlsRes" minOccurs="0">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element ref="ECBResponseHeader" minOccurs="0"/>
+                  <xs:element ref="ECBResponseBody" minOccurs="0"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="fetchNewApplicationDtlsReqMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="ns0:header"/>
+            <xs:element name="fetchNewApplicationDtlsReq">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element ref="ECBRequestHeader" minOccurs="0"/>
+                  <xs:element ref="ECBRequestBody" minOccurs="0"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="fetchNewApplicationDtlsResMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="ns0:header"/>
+            <xs:element name="fetchNewApplicationDtlsRes" minOccurs="0">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element ref="ECBResponseHeader" minOccurs="0"/>
+                  <xs:element ref="ECBResponseBody" minOccurs="0"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ECBRequestBody">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="mgRequest" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ECBRequestHeader">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="groupId" type="xs:string" minOccurs="0"/>
+            <xs:element name="messageId" type="xs:string" minOccurs="0"/>
+            <xs:element name="messageTimestamp" type="xs:string" minOccurs="0"/>
+            <xs:element name="Credentials" minOccurs="0">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="userDomain" type="xs:string" minOccurs="0"/>
+                  <xs:element name="userId" type="xs:string" minOccurs="0"/>
+                  <xs:element name="userPassword" type="xs:string" minOccurs="0"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Process" minOccurs="0">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="serviceId" type="xs:string" minOccurs="0"/>
+                  <xs:element name="productId" type="xs:string" minOccurs="0"/>
+                  <xs:element name="productNameSpace" type="xs:string" minOccurs="0"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Transform" minOccurs="0">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="transformNamespace" type="xs:string" minOccurs="0"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ECBResponseBody">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="MGResponse" type="xs:string" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ECBResponseHeader">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="groupId" type="xs:string" minOccurs="0"/>
+            <xs:element name="messageId" type="xs:string" minOccurs="0"/>
+            <xs:element name="messageTimestamp" type="xs:string" minOccurs="0"/>
+            <xs:element name="messageExpirationTimestamp" type="xs:string" minOccurs="0"/>
+            <xs:element name="xmlNamespace" type="xs:string" minOccurs="0"/>
+            <xs:element name="Process" minOccurs="0">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="serviceId" type="xs:string" minOccurs="0"/>
+                  <xs:element name="productId" type="xs:string" minOccurs="0"/>
+                  <xs:element name="productNamespace" type="xs:string" minOccurs="0"/>
+                  <xs:element name="Result" minOccurs="0">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="language" type="xs:string" minOccurs="0"/>
+                        <xs:element name="code" type="xs:string" minOccurs="0"/>
+                        <xs:element name="description" type="xs:string" minOccurs="0"/>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Transform" minOccurs="0">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="transformNamespace" type="xs:string" minOccurs="0"/>
+                  <xs:element name="Result" minOccurs="0">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="language" type="xs:string" minOccurs="0"/>
+                        <xs:element name="code" type="xs:string" minOccurs="0"/>
+                        <xs:element name="description" type="xs:string" minOccurs="0"/>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema xmlns="http://www.adcb.com/esb/common/header.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.adcb.com/esb/common/header.xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+      <xs:complexType name="headerType">
+        <xs:sequence>
+          <xs:element name="usecaseID" type="xs:string" minOccurs="0"/>
+          <xs:element name="serviceName" type="xs:string"/>
+          <xs:element name="versionNo" type="xs:string"/>
+          <xs:element name="serviceAction" type="xs:string" minOccurs="0"/>
+          <xs:element name="correlationID" type="xs:string" minOccurs="0"/>
+          <xs:element name="sysRefNumber" type="xs:string"/>
+          <xs:element name="senderID" type="xs:string"/>
+          <xs:element name="consumer" type="xs:string" minOccurs="0"/>
+          <xs:element name="reqTimeStamp" type="xs:string"/>
+          <xs:element name="repTimeStamp" type="xs:string" minOccurs="0"/>
+          <xs:element name="username" type="xs:string" minOccurs="0"/>
+          <xs:element name="credentials" type="xs:string" minOccurs="0"/>
+          <xs:element name="returnCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="errorDescription" type="xs:string" minOccurs="0"/>
+          <xs:element name="errorDetail" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="header" type="ns1:headerType"/>
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ADCB.AECB.EnquirySystem.API.Common.DTO.ECB_Common" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.datacontract.org/2004/07/ADCB.AECB.EnquirySystem.API.Common.DTO.ECB_Common" elementFormDefault="qualified" attributeFormDefault="unqualified">
+      <xs:complexType name="Ecb_Request">
+        <xs:sequence>
+          <xs:element name="AU" nillable="true" type="tns:Ecb_RequestAU" minOccurs="0"/>
+          <xs:element name="Channel" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="ConsentFlag" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="ContractType" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="ECB_Request_Type" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Enquiry_Type" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="LocalDBSearchReq" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="NAE" nillable="true" type="tns:Ecb_RequestNAE" minOccurs="0"/>
+          <xs:element name="ReferenceNumber" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Report_Type" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Role" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="UserID" nillable="true" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Ecb_RequestAU">
+        <xs:sequence>
+          <xs:element name="Status" nillable="true" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Ecb_RequestNAE">
+        <xs:sequence>
+          <xs:element name="Company" nillable="true" type="tns:Ecb_RequestNAECompany" minOccurs="0"/>
+          <xs:element name="Individual" nillable="true" type="tns:Ecb_RequestNAEIndividual" minOccurs="0"/>
+          <xs:element name="Installment" nillable="true" type="tns:Ecb_RequestNAEInstallment" minOccurs="0"/>
+          <xs:element name="NotInstallment" nillable="true" type="tns:Ecb_RequestNAENotInstallment" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Ecb_RequestNAECompany">
+        <xs:sequence>
+          <xs:element name="PrimaryMobileNo" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="TradeLicense" nillable="true" type="tns:Ecb_RequestNAECompanyTradeLicense" minOccurs="0"/>
+          <xs:element name="TradeName" nillable="true" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Ecb_RequestNAECompanyTradeLicense">
+        <xs:sequence>
+          <xs:element name="Number" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="RegistrationPlace" nillable="true" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Ecb_RequestNAEIndividual">
+        <xs:sequence>
+          <xs:element name="DOB" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="EmiratesId" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="FullName" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Gender" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Nationality" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Passport" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="PassportExpiryDate" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="PreviousPassport" nillable="true" type="tns:Ecb_RequestNAEIndividualPreviousPassport" minOccurs="0"/>
+          <xs:element name="PrimaryMobileNo" nillable="true" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Ecb_RequestNAEIndividualPreviousPassport">
+        <xs:sequence>
+          <xs:element name="Passport1" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Passport2" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Passport3" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Passport4" nillable="true" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Ecb_RequestNAEInstallment">
+        <xs:sequence>
+          <xs:element name="NoOfInstallments" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="TotalAmount" nillable="true" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Ecb_RequestNAENotInstallment">
+        <xs:sequence>
+          <xs:element name="CreditLimit" nillable="true" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Ecb_Response">
+        <xs:sequence>
+          <xs:element name="CBContractId" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="CBSubjectId" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="ChannelID" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="ECBFullResponse" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Employment_Status" nillable="true" type="tns:Ecb_ResponseEmployment_Status" minOccurs="0"/>
+          <xs:element name="ErrorCode" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="ErrorDesc" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Financial_Details" nillable="true" type="tns:Ecb_ResponseFinancial_Details" minOccurs="0"/>
+          <xs:element name="HIT_NOHIT" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Personal_Details" nillable="true" type="tns:Ecb_ResponsePersonal_Details" minOccurs="0"/>
+          <xs:element name="ProviderSubjectNumber" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="ReferenceNumber" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="ReportSource" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Report_Type" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Score" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Score_Range" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Status" nillable="true" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Ecb_ResponseEmployment_Status">
+        <xs:sequence>
+          <xs:element name="Date_Of_Employment" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Date_Of_Termination" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Date_of_Last_Update" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="EmpName" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="EmpType" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Gross_Annual_Income" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Provider_No" nillable="true" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Ecb_ResponseFinancial_Details">
+        <xs:sequence>
+          <xs:element name="DBR" nillable="true" type="tns:Ecb_ResponseFinancial_DetailsDBR" minOccurs="0"/>
+          <xs:element name="No_Of_Bounce_Cheque_Total" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="No_Of_Bounce_Cheque_last_90_days" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="No_of_30_dpd_in_last_6_months" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="No_of_60_dpd_in_last_12_months" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="No_of_90_dpd" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Number_of_Enquiry" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Oldest_Contract_Start_Date" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Restructure_Active_PIL_with_tenor_greater_then_48_mnths" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Summary" nillable="true" type="tns:Ecb_ResponseFinancial_DetailsSummary" minOccurs="0"/>
+          <xs:element name="Total_Outstanding_Balance" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Total_Overdue_Amount" nillable="true" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Ecb_ResponseFinancial_DetailsDBR">
+        <xs:sequence>
+          <xs:element name="External" nillable="true" type="tns:Ecb_ResponseFinancial_DetailsDBRExternal" minOccurs="0"/>
+          <xs:element name="Internal" nillable="true" type="tns:Ecb_ResponseFinancial_DetailsDBRInternal" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Ecb_ResponseFinancial_DetailsDBRExternal">
+        <xs:sequence>
+          <xs:element name="Sum_of_5_PER_CC" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Sum_of_EMI_of_all_Active_Loans" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Sum_of_EMI_of_all_Active_OD" nillable="true" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Ecb_ResponseFinancial_DetailsDBRInternal">
+        <xs:sequence>
+          <xs:element name="Sum_of_5_PER_CC" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Sum_of_EMI_of_all_Active_Loans" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Sum_of_EMI_of_all_Active_OD" nillable="true" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Ecb_ResponseFinancial_DetailsSummary">
+        <xs:sequence>
+          <xs:element name="Card" nillable="true" type="tns:Ecb_ResponseFinancial_DetailsSummaryCard" minOccurs="0"/>
+          <xs:element name="Loan" nillable="true" type="tns:Ecb_ResponseFinancial_DetailsSummaryLoan" minOccurs="0"/>
+          <xs:element name="OD" nillable="true" type="tns:Ecb_ResponseFinancial_DetailsSummaryOD" minOccurs="0"/>
+          <xs:element name="Services" nillable="true" type="tns:Ecb_ResponseFinancial_DetailsSummaryServices" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Ecb_ResponseFinancial_DetailsSummaryCard">
+        <xs:sequence>
+          <xs:element name="No_Active_Contract" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Total_Credit_Limit" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Total_Outstanding_Balance_Amount" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Total_Overdue_Amount" nillable="true" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Ecb_ResponseFinancial_DetailsSummaryLoan">
+        <xs:sequence>
+          <xs:element name="No_Active_Contract" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Total_Monthly_Instalments_Amount" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Total_Outstanding_Balance_Amount" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Total_Overdue_Amount" nillable="true" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Ecb_ResponseFinancial_DetailsSummaryOD">
+        <xs:sequence>
+          <xs:element name="No_Active_Contract" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Total_Credit_Limit" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Total_Outstanding_Balance_Amount" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Total_Overdue_Amount" nillable="true" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Ecb_ResponseFinancial_DetailsSummaryServices">
+        <xs:sequence>
+          <xs:element name="No_Active_Contract" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Total_Credit_Limit" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Total_Outstanding_Balance_Amount" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Total_Overdue_Amount" nillable="true" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Ecb_ResponsePersonal_Details">
+        <xs:sequence>
+          <xs:element name="Company" nillable="true" type="tns:Ecb_ResponsePersonal_DetailsCompany" minOccurs="0"/>
+          <xs:element name="Individual" nillable="true" type="tns:Ecb_ResponsePersonal_DetailsIndividual" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Ecb_ResponsePersonal_DetailsCompany">
+        <xs:sequence>
+          <xs:element name="Address" nillable="true" type="tns:Ecb_ResponsePersonal_DetailsCompanyAddress" minOccurs="0"/>
+          <xs:element name="Company_Name" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Company_Name_AR" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Contact" nillable="true" type="tns:Ecb_ResponsePersonal_DetailsCompanyContact" minOccurs="0"/>
+          <xs:element name="Registration_Date" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Trade_License_Number" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Trade_License_Place" nillable="true" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Ecb_ResponsePersonal_DetailsCompanyAddress">
+        <xs:sequence>
+          <xs:element name="ADRDetails" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="DateLastUpdated" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Emirates" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="POBox" nillable="true" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Ecb_ResponsePersonal_DetailsCompanyContact">
+        <xs:sequence>
+          <xs:element name="Email_ID" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Mobile_Number" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Phone_Number" nillable="true" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Ecb_ResponsePersonal_DetailsIndividual">
+        <xs:sequence>
+          <xs:element name="Address" nillable="true" type="tns:Ecb_ResponsePersonal_DetailsIndividualAddress" minOccurs="0"/>
+          <xs:element name="Contact" nillable="true" type="tns:Ecb_ResponsePersonal_DetailsIndividualContact" minOccurs="0"/>
+          <xs:element name="Date_of_Birth" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="EIDA" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="FullName" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="FullName_AR" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Nationality" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Passport" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Resident_Flag" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Title" nillable="true" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Ecb_ResponsePersonal_DetailsIndividualAddress">
+        <xs:sequence>
+          <xs:element name="ADRDetails" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="DateLastUpdated" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Emirates" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="POBox" nillable="true" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Ecb_ResponsePersonal_DetailsIndividualContact">
+        <xs:sequence>
+          <xs:element name="Email_ID" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Mobile_Number" nillable="true" type="xs:string" minOccurs="0"/>
+          <xs:element name="Phone_Number" nillable="true" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Ecb_Request" nillable="true" type="tns:Ecb_Request"/>
+      <xs:element name="Ecb_RequestAU" nillable="true" type="tns:Ecb_RequestAU"/>
+      <xs:element name="Ecb_RequestNAE" nillable="true" type="tns:Ecb_RequestNAE"/>
+      <xs:element name="Ecb_RequestNAECompany" nillable="true" type="tns:Ecb_RequestNAECompany"/>
+      <xs:element name="Ecb_RequestNAECompanyTradeLicense" nillable="true" type="tns:Ecb_RequestNAECompanyTradeLicense"/>
+      <xs:element name="Ecb_RequestNAEIndividual" nillable="true" type="tns:Ecb_RequestNAEIndividual"/>
+      <xs:element name="Ecb_RequestNAEIndividualPreviousPassport" nillable="true" type="tns:Ecb_RequestNAEIndividualPreviousPassport"/>
+      <xs:element name="Ecb_RequestNAEInstallment" nillable="true" type="tns:Ecb_RequestNAEInstallment"/>
+      <xs:element name="Ecb_RequestNAENotInstallment" nillable="true" type="tns:Ecb_RequestNAENotInstallment"/>
+      <xs:element name="Ecb_Response" nillable="true" type="tns:Ecb_Response"/>
+      <xs:element name="Ecb_ResponseEmployment_Status" nillable="true" type="tns:Ecb_ResponseEmployment_Status"/>
+      <xs:element name="Ecb_ResponseFinancial_Details" nillable="true" type="tns:Ecb_ResponseFinancial_Details"/>
+      <xs:element name="Ecb_ResponseFinancial_DetailsDBR" nillable="true" type="tns:Ecb_ResponseFinancial_DetailsDBR"/>
+      <xs:element name="Ecb_ResponseFinancial_DetailsDBRExternal" nillable="true" type="tns:Ecb_ResponseFinancial_DetailsDBRExternal"/>
+      <xs:element name="Ecb_ResponseFinancial_DetailsDBRInternal" nillable="true" type="tns:Ecb_ResponseFinancial_DetailsDBRInternal"/>
+      <xs:element name="Ecb_ResponseFinancial_DetailsSummary" nillable="true" type="tns:Ecb_ResponseFinancial_DetailsSummary"/>
+      <xs:element name="Ecb_ResponseFinancial_DetailsSummaryCard" nillable="true" type="tns:Ecb_ResponseFinancial_DetailsSummaryCard"/>
+      <xs:element name="Ecb_ResponseFinancial_DetailsSummaryLoan" nillable="true" type="tns:Ecb_ResponseFinancial_DetailsSummaryLoan"/>
+      <xs:element name="Ecb_ResponseFinancial_DetailsSummaryOD" nillable="true" type="tns:Ecb_ResponseFinancial_DetailsSummaryOD"/>
+      <xs:element name="Ecb_ResponseFinancial_DetailsSummaryServices" nillable="true" type="tns:Ecb_ResponseFinancial_DetailsSummaryServices"/>
+      <xs:element name="Ecb_ResponsePersonal_Details" nillable="true" type="tns:Ecb_ResponsePersonal_Details"/>
+      <xs:element name="Ecb_ResponsePersonal_DetailsCompany" nillable="true" type="tns:Ecb_ResponsePersonal_DetailsCompany"/>
+      <xs:element name="Ecb_ResponsePersonal_DetailsCompanyAddress" nillable="true" type="tns:Ecb_ResponsePersonal_DetailsCompanyAddress"/>
+      <xs:element name="Ecb_ResponsePersonal_DetailsCompanyContact" nillable="true" type="tns:Ecb_ResponsePersonal_DetailsCompanyContact"/>
+      <xs:element name="Ecb_ResponsePersonal_DetailsIndividual" nillable="true" type="tns:Ecb_ResponsePersonal_DetailsIndividual"/>
+      <xs:element name="Ecb_ResponsePersonal_DetailsIndividualAddress" nillable="true" type="tns:Ecb_ResponsePersonal_DetailsIndividualAddress"/>
+      <xs:element name="Ecb_ResponsePersonal_DetailsIndividualContact" nillable="true" type="tns:Ecb_ResponsePersonal_DetailsIndividualContact"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:service name="InqECBApplicationDetails">
+    <wsdl:port name="InqECBApplicationDetailsPortTypeEndpoint0" binding="tns:InqECBApplicationDetailsPortTypeEndpoint0Binding">
+      <soap:address location="http://10.146.163.71:5529/Services/ADCBExternalServices/ExternalServicesInquiry/Service/InqECBApplicationDetails.serviceagent/InqECBApplicationDetailsPortTypeEndpoint0"/>
+    </wsdl:port>
+  </wsdl:service>
+  <wsdl:portType name="InqECBApplicationDetailsPortType">
+    <wsdl:operation name="fetchECBReportDtls_Oper">
+      <wsdl:input message="tns:fetchECBReportDtlsInputMessage"/>
+      <wsdl:output message="tns:fetchECBReportDtlsOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="fetchApplicationUpdateDtls_Oper">
+      <wsdl:input message="tns:fetchApplicationUpdateDtlsInputMessage"/>
+      <wsdl:output message="tns:fetchApplicationUpdateDtlsOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="fetchMonitoringDtls_Oper">
+      <wsdl:input message="tns:fetchMonitoringDtlsInputMessage"/>
+      <wsdl:output message="tns:fetchMonitoringDtlsOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="fetchNewApplicationDtls_Oper">
+      <wsdl:input message="tns:fetchNewApplicationDtlsInputMessage"/>
+      <wsdl:output message="tns:fetchNewApplicationDtlsOutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="fetchAdditonalApplicationDtls_Oper">
+      <wsdl:input message="tns:fetchAdditonalApplicationDtlsInputMessage"/>
+      <wsdl:output message="tns:fetchAdditonalApplicationDtlsOutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="InqECBApplicationDetailsPortTypeEndpoint0Binding" type="tns:InqECBApplicationDetailsPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="fetchECBReportDtls_Oper">
+      <soap:operation style="document" soapAction="/Services/ADCBExternalServices/ExternalServicesInquiry/Service/InqECBApplicationDetails.serviceagent//fetchECBReportDtls_Oper"/>
+      <wsdl:input>
+        <soap:body use="literal" parts="fetchECBReportDtlsInputMsg"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="fetchECBReportDtlsOutputMsg"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetchApplicationUpdateDtls_Oper">
+      <soap:operation style="document" soapAction="/Services/ADCBExternalServices/ExternalServicesInquiry/Service/InqECBApplicationDetails.serviceagent/InqECBApplicationDetailsPortTypeEndpoint0/fetchApplicationUpdateDtls_Oper"/>
+      <wsdl:input>
+        <soap:body use="literal" parts="fetchApplicationUpdateDtlsInputMsg"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="fetchApplicationUpdateDtlsOutputMsg"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetchMonitoringDtls_Oper">
+      <soap:operation style="document" soapAction="/Services/ADCBExternalServices/ExternalServicesInquiry/Service/InqECBApplicationDetails.serviceagent/InqECBApplicationDetailsPortTypeEndpoint0/fetchMonitoringDtls_Oper"/>
+      <wsdl:input>
+        <soap:body use="literal" parts="fetchMonitoringDtlsInputMsg"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="fetchMonitoringDtlsOutputMsg"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetchNewApplicationDtls_Oper">
+      <soap:operation style="document" soapAction="/Services/ADCBExternalServices/ExternalServicesInquiry/Service/InqECBApplicationDetails.serviceagent/InqECBApplicationDetailsPortTypeEndpoint0/fetchNewApplicationDtls_Oper"/>
+      <wsdl:input>
+        <soap:body use="literal" parts="fetchNewApplicationDtlsInputMsg"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="fetchNewApplicationDtlsOutputMsg"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetchAdditonalApplicationDtls_Oper">
+      <soap:operation style="document" soapAction="/Services/ADCBExternalServices/ExternalServicesInquiry/Service/InqECBApplicationDetails.serviceagent/InqECBApplicationDetailsPortTypeEndpoint0/fetchAdditonalApplicationDtls_Oper"/>
+      <wsdl:input>
+        <soap:body use="literal" parts="fetchAdditonalApplicationDtlsInputMsg"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="fetchAdditonalApplicationDtlsOutputMsg"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:message name="fetchECBReportDtlsInputMessage">
+    <wsdl:part name="fetchECBReportDtlsInputMsg" element="ns0:fetchECBReportDtlsReqMsg"/>
+  </wsdl:message>
+  <wsdl:message name="fetchECBReportDtlsOutputMessage">
+    <wsdl:part name="fetchECBReportDtlsOutputMsg" element="ns0:fetchECBReportDtlsResMsg"/>
+  </wsdl:message>
+  <wsdl:message name="fetchApplicationUpdateDtlsInputMessage">
+    <wsdl:part name="fetchApplicationUpdateDtlsInputMsg" element="ns0:fetchApplicationUpdateDtlsReqMsg"/>
+  </wsdl:message>
+  <wsdl:message name="fetchApplicationUpdateDtlsOutputMessage">
+    <wsdl:part name="fetchApplicationUpdateDtlsOutputMsg" element="ns0:fetchApplicationUpdateDtlsResMsg"/>
+  </wsdl:message>
+  <wsdl:message name="fetchMonitoringDtlsInputMessage">
+    <wsdl:part name="fetchMonitoringDtlsInputMsg" element="ns0:fetchMonitoringDtlsReqMsg"/>
+  </wsdl:message>
+  <wsdl:message name="fetchMonitoringDtlsOutputMessage">
+    <wsdl:part name="fetchMonitoringDtlsOutputMsg" element="ns0:fetchMonitoringDtlsResMsg"/>
+  </wsdl:message>
+  <wsdl:message name="fetchNewApplicationDtlsInputMessage">
+    <wsdl:part name="fetchNewApplicationDtlsInputMsg" element="ns0:fetchNewApplicationDtlsReqMsg"/>
+  </wsdl:message>
+  <wsdl:message name="fetchNewApplicationDtlsOutputMessage">
+    <wsdl:part name="fetchNewApplicationDtlsOutputMsg" element="ns0:fetchNewApplicationDtlsResMsg"/>
+  </wsdl:message>
+  <wsdl:message name="fetchAdditonalApplicationDtlsInputMessage">
+    <wsdl:part name="fetchAdditonalApplicationDtlsInputMsg" element="ns0:fetchAdditonalApplicationDtlsReqMsg"/>
+  </wsdl:message>
+  <wsdl:message name="fetchAdditonalApplicationDtlsOutputMessage">
+    <wsdl:part name="fetchAdditonalApplicationDtlsOutputMsg" element="ns0:fetchAdditonalApplicationDtlsResMsg"/>
+  </wsdl:message>
+</wsdl:definitions>

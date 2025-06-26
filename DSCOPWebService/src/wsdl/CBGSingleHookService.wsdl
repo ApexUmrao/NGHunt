@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:ns="http://service.cbg.newgen.com" xmlns:ax284="http://request.cbg.newgen.com/xsd" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ax286="http://response.cbg.newgen.com/xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:ns1="http://org.apache.axis2/xsd" targetNamespace="http://service.cbg.newgen.com">
+    <wsdl:documentation>
+		Please Type your service description here
+	</wsdl:documentation>
+    <wsdl:types>
+        <xs:schema xmlns:ax287="http://request.cbg.newgen.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://response.cbg.newgen.com/xsd">
+            <xs:import namespace="http://request.cbg.newgen.com/xsd"/>
+            <xs:complexType name="CBGSingleHookResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="SYSREFNO" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="WI_NAME" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="WSName" nillable="true" type="xs:string"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="applicationAttributes" nillable="true" type="ax284:ApplicationAttributes"/>
+                    <xs:element minOccurs="0" name="applicationName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="language" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="leadNumber" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="stage" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="statusCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="statusMessage" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+        <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://request.cbg.newgen.com/xsd">
+            <xs:complexType name="CBGSingleHookRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="IP" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="MODE" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="SYSREFNO" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="WI_NAME" nillable="true" type="xs:string"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="applicationAttributes" nillable="true" type="ax284:ApplicationAttributes"/>
+                    <xs:element minOccurs="0" name="applicationName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="deviceID" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="language" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="leadNumber" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="requestDateTime" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="sourcingCenter" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="sourcingChannel" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="stage" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ApplicationAttributes">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="attributeDetails" nillable="true" type="ax284:AttributeDetails"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="AttributeDetails">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="attributes" nillable="true" type="ax284:Attributes"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Attributes">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="attributeKey" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="attributeValue" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+        <xs:schema xmlns:ax285="http://request.cbg.newgen.com/xsd" xmlns:ax288="http://response.cbg.newgen.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://service.cbg.newgen.com">
+            <xs:import namespace="http://request.cbg.newgen.com/xsd"/>
+            <xs:import namespace="http://response.cbg.newgen.com/xsd"/>
+            <xs:element name="singleHook">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="request" nillable="true" type="ax284:CBGSingleHookRequest"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="singleHookResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax286:CBGSingleHookResponse"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="singleHookRequest">
+        <wsdl:part name="parameters" element="ns:singleHook"/>
+    </wsdl:message>
+    <wsdl:message name="singleHookResponse">
+        <wsdl:part name="parameters" element="ns:singleHookResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="CBGSingleHookServicePortType">
+        <wsdl:operation name="singleHook">
+            <wsdl:input message="ns:singleHookRequest" wsaw:Action="urn:singleHook"/>
+            <wsdl:output message="ns:singleHookResponse" wsaw:Action="urn:singleHookResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="CBGSingleHookServiceSoap11Binding" type="ns:CBGSingleHookServicePortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="singleHook">
+            <soap:operation soapAction="urn:singleHook" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="CBGSingleHookServiceSoap12Binding" type="ns:CBGSingleHookServicePortType">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="singleHook">
+            <soap12:operation soapAction="urn:singleHook" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="CBGSingleHookServiceHttpBinding" type="ns:CBGSingleHookServicePortType">
+        <http:binding verb="POST"/>
+        <wsdl:operation name="singleHook">
+            <http:operation location="singleHook"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="CBGSingleHookService">
+        <wsdl:port name="CBGSingleHookServiceHttpsSoap11Endpoint" binding="ns:CBGSingleHookServiceSoap11Binding">
+            <soap:address location="https://10.146.166.52:9044/axis2/services/CBGSingleHookService.CBGSingleHookServiceHttpsSoap11Endpoint/"/>
+        </wsdl:port>
+        <wsdl:port name="CBGSingleHookServiceHttpSoap11Endpoint" binding="ns:CBGSingleHookServiceSoap11Binding">
+            <soap:address location="http://10.146.166.52:9082/axis2/services/CBGSingleHookService.CBGSingleHookServiceHttpSoap11Endpoint/"/>
+        </wsdl:port>
+        <wsdl:port name="CBGSingleHookServiceHttpsSoap12Endpoint" binding="ns:CBGSingleHookServiceSoap12Binding">
+            <soap12:address location="https://10.146.166.52:9044/axis2/services/CBGSingleHookService.CBGSingleHookServiceHttpsSoap12Endpoint/"/>
+        </wsdl:port>
+        <wsdl:port name="CBGSingleHookServiceHttpSoap12Endpoint" binding="ns:CBGSingleHookServiceSoap12Binding">
+            <soap12:address location="http://10.146.166.52:9082/axis2/services/CBGSingleHookService.CBGSingleHookServiceHttpSoap12Endpoint/"/>
+        </wsdl:port>
+        <wsdl:port name="CBGSingleHookServiceHttpsEndpoint" binding="ns:CBGSingleHookServiceHttpBinding">
+            <http:address location="https://10.146.166.52:9044/axis2/services/CBGSingleHookService.CBGSingleHookServiceHttpsEndpoint/"/>
+        </wsdl:port>
+        <wsdl:port name="CBGSingleHookServiceHttpEndpoint" binding="ns:CBGSingleHookServiceHttpBinding">
+            <http:address location="http://10.146.166.52:9082/axis2/services/CBGSingleHookService.CBGSingleHookServiceHttpEndpoint/"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
