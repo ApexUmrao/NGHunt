@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry including="**/*.java" kind="src" output="target/classes" path="src">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/activation-1.1.jar"/>
+	<classpathentry kind="lib" path="lib/Admin.jar"/>
+	<classpathentry kind="lib" path="lib/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="lib/axiom-api-1.2.13.jar"/>
+	<classpathentry kind="lib" path="lib/axiom-dom-1.2.13.jar"/>
+	<classpathentry kind="lib" path="lib/axiom-impl-1.2.13.jar"/>
+	<classpathentry kind="lib" path="lib/axis.jar"/>
+	<classpathentry kind="lib" path="lib/axis2-adb-1.6.2.jar"/>
+	<classpathentry kind="lib" path="lib/axis2-adb-codegen-1.6.2.jar"/>
+	<classpathentry kind="lib" path="lib/axis2-ant-plugin-1.6.2.jar"/>
+	<classpathentry kind="lib" path="lib/axis2-clustering-1.6.2.jar"/>
+	<classpathentry kind="lib" path="lib/axis2-codegen-1.6.2.jar"/>
+	<classpathentry kind="lib" path="lib/axis2-corba-1.6.2.jar"/>
+	<classpathentry kind="lib" path="lib/axis2-fastinfoset-1.6.2.jar"/>
+	<classpathentry kind="lib" path="lib/axis2-java2wsdl-1.6.2.jar"/>
+	<classpathentry kind="lib" path="lib/axis2-jaxbri-1.6.2.jar"/>
+	<classpathentry kind="lib" path="lib/axis2-jaxws-1.6.2.jar"/>
+	<classpathentry kind="lib" path="lib/axis2-jibx-1.6.2.jar"/>
+	<classpathentry kind="lib" path="lib/axis2-json-1.6.2.jar"/>
+	<classpathentry kind="lib" path="lib/axis2-kernel-1.6.2.jar"/>
+	<classpathentry kind="lib" path="lib/axis2-metadata-1.6.2.jar"/>
+	<classpathentry kind="lib" path="lib/axis2-mtompolicy-1.6.2.jar"/>
+	<classpathentry kind="lib" path="lib/axis2-saaj-1.6.2.jar"/>
+	<classpathentry kind="lib" path="lib/axis2-soapmonitor-servlet-1.6.2.jar"/>
+	<classpathentry kind="lib" path="lib/axis2-spring-1.6.2.jar"/>
+	<classpathentry kind="lib" path="lib/axis2-transport-http-1.6.2.jar"/>
+	<classpathentry kind="lib" path="lib/axis2-transport-local-1.6.2.jar"/>
+	<classpathentry kind="lib" path="lib/axis2-xmlbeans-1.6.2.jar"/>
+	<classpathentry kind="lib" path="lib/CCLPPSingleHookService.jar"/>
+	<classpathentry kind="lib" path="lib/commons-cli-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/commons-codec-1.4.jar"/>
+	<classpathentry kind="lib" path="lib/commons-discovery-0.2.jar"/>
+	<classpathentry kind="lib" path="lib/commons-fileupload-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/commons-httpclient-3.1.jar"/>
+	<classpathentry kind="lib" path="lib/commons-io-1.4.jar"/>
+	<classpathentry kind="lib" path="lib/commons-jxpath-1.3.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/Decryption.jar"/>
+	<classpathentry kind="lib" path="lib/geronimo-stax-api_1.0_spec-1.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/gson-2.4.jar"/>
+	<classpathentry kind="lib" path="lib/httpcore-4.0.jar"/>
+	<classpathentry kind="lib" path="lib/ISPack.jar"/>
+	<classpathentry kind="lib" path="lib/itextpdf-5.5.8.jar"/>
+	<classpathentry kind="lib" path="lib/java-json.jar"/>
+	<classpathentry kind="lib" path="lib/javax.ws.rs.jar"/>
+	<classpathentry kind="lib" path="lib/jaxrpc.jar"/>
+	<classpathentry kind="lib" path="lib/jdts.jar"/>
+	<classpathentry kind="lib" path="lib/jsoup-1.11.3.jar"/>
+	<classpathentry kind="lib" path="lib/jsse.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-1.2.15.jar"/>
+	<classpathentry kind="lib" path="lib/mail-1.4.jar"/>
+	<classpathentry kind="lib" path="lib/neethi-3.0.2.jar"/>
+	<classpathentry kind="lib" path="lib/NGEjbCallBroker.jar"/>
+	<classpathentry kind="lib" path="lib/NGUtility.jar"/>
+	<classpathentry kind="lib" path="lib/omnishared.jar"/>
+	<classpathentry kind="lib" path="lib/PDFCreation.jar"/>
+	<classpathentry kind="lib" path="lib/rt.jar"/>
+	<classpathentry kind="lib" path="lib/saaj.jar"/>
+	<classpathentry kind="lib" path="lib/SecurityAPI.jar"/>
+	<classpathentry kind="lib" path="lib/WebService.jar"/>
+	<classpathentry kind="lib" path="lib/wfdesktop.jar"/>
+	<classpathentry kind="lib" path="lib/WFSShared.jar"/>
+	<classpathentry kind="lib" path="lib/woden-api-1.0M9.jar"/>
+	<classpathentry kind="lib" path="lib/woden-impl-commons-1.0M9.jar"/>
+	<classpathentry kind="lib" path="lib/woden-impl-dom-1.0M9.jar"/>
+	<classpathentry kind="lib" path="lib/wsdl4j.jar"/>
+	<classpathentry kind="lib" path="lib/wsdl4j-1.6.2.jar"/>
+	<classpathentry kind="lib" path="lib/wstx-asl-3.2.9.jar"/>
+	<classpathentry kind="lib" path="lib/xmlbeans-2.3.0.jar"/>
+	<classpathentry kind="lib" path="lib/XmlSchema-1.4.7.jar"/>
+	<classpathentry kind="lib" path="lib/xmlworker-5.5.11.jar"/>
+	<classpathentry kind="lib" path="lib/xom.jar"/>
+	<classpathentry kind="lib" path="lib/zip4j_1.3.2.jar"/>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="target/generated-sources/annotations">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="ignore_optional_problems" value="true"/>
+			<attribute name="m2e-apt" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/test-classes" path="target/generated-test-sources/test-annotations">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="ignore_optional_problems" value="true"/>
+			<attribute name="m2e-apt" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
