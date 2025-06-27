@@ -1,0 +1,266 @@
+Structured Introduction: 
+
+Quantify Achievements: "Reduced API latency by 40% using caching". and “Improved performance by 30%".
+
+Highlight roles and responsibilities clearly with relevant technologies and projects.
+
+How you debugged a production issue : Performance optimization (caching, DB indexing).
+
+
+
+
+
+⚠️ Pro Tip: For every concept, prepare a 1-sentence real-use case from your experience (e.g., "Used Kafka to decouple payment processing from order service").
+
+The first project is the Credit Score Analysis Tool by Swedbank (In Sweden)
+The second project is the Claims Processing System by Statewide Insurance Group (In the USA)
+
+
+
+
+Q: Production JVM crashes with OutOfMemoryError: Java heap space – next steps?
+A:
+
+Capture heap dump: -XX:+HeapDumpOnOutOfMemoryError
+
+Analyze with Eclipse MAT
+
+Check for memory leaks (e.g., static maps, unclosed streams)
+
+Increase heap size temporarily: -Xmx4g
+
+
+
+1. Java
+
+Java Interview Question PDF -- Basics java
+
+OOP Principles: Encapsulation, Inheritance, Polymorphism, Abstraction.
+
+Collections: ArrayList vs. LinkedList, HashMap internals (hashing, collision handling).
+
+Multithreading: synchronized, volatile, ExecutorService, deadlock prevention.
+
+Exception Handling: Checked vs. unchecked exceptions, custom exceptions.
+
+Java 8+: Lambda expressions, Optional, functional interfaces (Predicate, Function).
+
+
+
+
+2. Spring Framework
+
+Core: Dependency Injection (types: constructor/setter), Inversion of Control (IoC).
+
+Bean Scopes: singleton, prototype, web-aware scopes.
+
+Annotations: @Autowired, @Qualifier, @Component, @Configuration.
+
+
+
+
+3. Maven
+
+POM: Dependency management, plugins, parent POM.
+
+Lifecycle: clean, compile, test, package, install.
+
+Dependency Scope: compile, provided, test.
+
+
+
+
+4. Git
+
+Branching: git checkout -b, git merge vs. git rebase.
+
+Undoing Changes: git reset, git revert, git stash.
+
+Collaboration: git fetch, git pull, resolving merge conflicts. git merge and git rebase.
+
+
+
+
+5. Spring Boot
+
+Auto-Configuration: How it works (conditional beans via @ConditionalOnClass).
+
+Starters: Purpose of spring-boot-starter-web, spring-boot-starter-data-jpa.
+
+Externalized Config: application.properties vs. application.yml, profiles (@Profile).
+
+Creating RESTful APIs with @RestController.
+
+
+
+
+6. Java Coding
+
+Strings: Reverse, palindrome, anagram checks.
+
+Arrays/Lists: Find duplicates, two-sum problem, merge sorted arrays.
+
+Data Structures: Implement HashMap, binary tree traversal.
+
+
+
+
+7. Microservices
+
+Microservices architecture advantages
+
+Service discovery basics (Eureka, Consul)
+
+API Gateway purpose
+
+Inter-service communication (REST vs messaging) and  REST vs. async messaging (Kafka/RabbitMQ).
+
+
+
+
+8. SQL
+
+Joins: INNER JOIN, LEFT JOIN, self-join.
+
+Aggregation: GROUP BY, HAVING, COUNT/SUM.
+
+Subqueries: Correlated vs. non-correlated.
+
+Optimization: Indexes, EXPLAIN plans and performance impact
+
+
+
+
+9. Stream API Coding (Theory Part)
+
+Filter/Transform: Filter even numbers, convert list to map.
+
+Aggregation: Sum, average, max/min.
+
+Grouping: Group objects by property (e.g., Collectors.groupingBy).
+
+
+
+
+---------------------------------------------------------NEED TO LEARN IF TIME ALLOWS---------------------------------------------------------
+
+
+
+10. Spring Security
+
+Authentication/Authorization: Form-based vs. JWT, role-based access control.
+
+Key Annotations: @EnableWebSecurity, @PreAuthorize.
+
+Password Encoding: BCryptPasswordEncoder.
+
+
+
+
+11. Spring Data JPA
+
+Repository Interfaces: CrudRepository vs. JpaRepository.
+
+N+1 Problem: Solutions (JPQL JOIN FETCH, @EntityGraph).
+
+Transactions: @Transactional propagation/isolation settings.
+
+
+
+
+12. Kafka
+
+Core Concepts: Topics, partitions, producers/consumers, consumer groups.
+
+Delivery Semantics: At-least-once vs. exactly-once.
+
+Partitioning: Strategies (key-based, round-robin).
+
+
+
+
+
+
+
+                                                       
+
+
+
+
+
+
+
+
+🔸 1. Tell me about a challenging bug you faced and how you resolved it.
+Sample Answer (STAR Method):
+
+Situation: In one of our microservices, a critical API was returning wrong data intermittently.
+
+Task: I had to identify and fix the root cause quickly, as it was affecting clients.
+
+Action: I analyzed the logs, reproduced the issue locally, and found that a caching layer was serving stale data. I fixed the cache eviction logic and added integration tests.
+
+Result: The issue was resolved within a day, and we prevented similar issues by adding automated tests and monitoring alerts.
+
+🔸 2. Describe a time you had a conflict with a teammate. How did you handle it?
+Tips: Focus on communication, empathy, and solution orientation.
+
+Sample Answer:
+
+Situation: A teammate and I disagreed on the architecture for a new module.
+
+Task: We needed to finalize the design quickly to avoid delaying the sprint.
+
+Action: I proposed a meeting where we both presented our solutions with pros and cons. We brought in a senior developer as a neutral voice.
+
+Result: We agreed on a hybrid approach that combined the best of both ideas, and the module was delivered on time.
+
+🔸 3. How do you handle tight deadlines or pressure?
+Sample Answer:
+
+I break down the work into smaller tasks and prioritize based on impact. I communicate clearly with my team and manager if something seems unrealistic. In a recent release, I worked late for a couple of days to help meet a client deadline — but also suggested process improvements so we avoid last-minute rushes in future sprints.
+
+🔸 4. Tell me about a time you improved code quality or performance.
+Sample Answer:
+
+Situation: I noticed a REST endpoint taking 2–3 seconds due to unnecessary database joins.
+
+Task: I had to optimize it without affecting business logic.
+
+Action: I rewrote the query using JOIN FETCH to eliminate the N+1 problem and added pagination to reduce data load.
+
+Result: API response time dropped to under 300ms, and we saw a 50% improvement in throughput.
+
+🔸 5. Have you ever missed a deadline? What did you learn?
+Sample Answer:
+
+Situation: Yes, during the early phase of a project, we underestimated integration time with a third-party service.
+
+Action: I informed the team and worked closely with the vendor to debug issues. We added buffer time in future estimations and improved our mock testing setup.
+
+Result: While we missed the original timeline, the final product was more stable. We used the lessons learned to improve sprint planning.
+
+🔸 6. How do you ensure good communication with non-technical stakeholders?
+Sample Answer:
+
+I avoid technical jargon and focus on business outcomes. For example, instead of saying “database indexing improved query speed,” I say “we made changes to make the system respond faster for customers.” I also use visuals and demos to make features easier to understand.
+
+🔸 7. Tell me about a time you took initiative.
+Sample Answer:
+
+When I joined a new project, I noticed we had no logging or monitoring setup. I proactively added structured logging using Logback and set up alerts in Grafana. This helped the team catch issues faster and reduced debugging time during incidents.
+
+🔸 8. Describe your experience working in an Agile team.
+Sample Answer:
+
+I've worked in Agile for most of my career. We followed 2-week sprints, had daily stand-ups, sprint planning, and retrospectives. I actively contributed during grooming and demo sessions, often suggesting improvements to backlog items or how to split large stories into smaller, testable pieces.
+
+🔸 9. What would you do if you disagree with your lead on a technical decision?
+Sample Answer:
+
+I would first try to understand their reasoning. If I still have concerns, I’d respectfully present data or examples to support my view. If we still don’t agree, I’d align with the lead’s call but make sure my concerns are documented or discussed in a retrospective.
+
+🔸 10. Have you mentored or helped junior developers?
+Sample Answer:
+
+Yes, I’ve mentored interns and new joiners. I helped them understand our codebase, followed pair programming, and reviewed their pull requests with constructive feedback. I find teaching others also helps me improve.

@@ -1,0 +1,160 @@
+INTERVIEW STRATEGY
+
+
+Connect Tech to Outcomes:
+"I used [Tech] to solve [Problem], achieving [Result]."
+Example: "Hibernate caching reduced DB load by 40%."
+
+Highlight Versatility:
+"I chose PostgreSQL for geospatial needs vs. Oracle for financial transactions."
+
+Show Evolution:
+"Moved from SVN → Git for better branching, and JBoss → Spring Boot for faster boot times."
+
+Ask Insightful Questions:
+"How do you balance microservice independence vs. DRY principles here?"
+
+
+
+1. Languages
+
+Java SE/EE:
+Use Case: Developed core backend logic for an e-commerce payment gateway (Java EE). Used Java SE for multithreaded batch processing of 10K+ daily transactions.
+Why? Platform independence, robustness, and concurrency utilities (CompletableFuture).
+
+JavaScript:
+Use Case: Built dynamic admin dashboards (React.js) to monitor real-time payment success/failure rates.
+Why? Frontend interactivity without full page reloads.
+
+
+
+
+
+
+2. Frameworks & Libraries
+
+Spring Boot:
+Use Case: Created RESTful microservices for user authentication and order processing.
+Why? Auto-configuration, embedded Tomcat, and dependency management.
+
+Spring MVC:
+Use Case: Legacy monolith migration – used @Controller and DispatcherServlet to handle HTTP requests for order tracking.
+
+Hibernate/JPA:
+Use Case: Managed customer data across Oracle and PostgreSQL DBs. Used @OneToMany mapping for User→Orders relationships.
+Optimization: Lazy loading + @EntityGraph to fix N+1 queries.
+
+RESTful APIs:
+Use Case: Designed stateless APIs for mobile/web clients. Example:
+
+
+
+
+
+3. Databases
+
+Oracle:
+Use Case: Chose for ACID-compliant financial transactions (e.g., payment settlements).
+Key Feature: PL/SQL for complex server-side logic.
+
+MySQL:
+Use Case: User profile management (high read-volume). Optimized with indexes and replication.
+
+PostgreSQL:
+Use Case: Geospatial queries for store locator microservice (using PostGIS extension).
+
+
+
+
+
+
+4. Servers & Deployment
+
+Tomcat/JBoss/WebSphere:
+Use Case:
+
+Tomcat: Default for Spring Boot WAR deployments.
+
+JBoss: Used for EJB-heavy legacy modules.
+
+WebSphere: Enterprise SSO integration.
+
+Maven:
+Use Case: Managed dependencies (e.g., Spring, Hibernate) and built artifacts via mvn clean package.
+
+Jenkins & CI/CD:
+Use Case: Automated pipeline:
+
+
+Docker:
+Use Case: Containerized microservices for consistent environments (Dev to Prod).
+
+
+
+
+
+5. Version Control & Tools
+
+Git/GitLab:
+Use Case: Feature branching + merge requests for collaborative development.
+Example: git rebase to keep master history clean.
+
+SVN:
+Use Case: Maintained legacy projects (phased out post-2022).
+
+JIRA:
+Use Case: Managed Agile sprints – user stories, backlog grooming, and bug tracking.
+
+
+
+
+
+
+6. Testing
+
+JUnit & Mockito:
+Use Case:
+
+Unit-tested payment validation logic.
+
+Mocked PaymentGatewayService to test failure scenarios.
+
+Postman:
+Use Case: Automated API testing (e.g., 200+ endpoints for smoke testing).
+
+SoapUI:
+Use Case: Tested SOAP-based integrations with legacy banking systems.
+
+
+
+
+
+
+
+
+7. Other Skills
+
+Microservices:
+Use Case: Decomposed monolith into 6 microservices (Spring Boot + Docker).
+Challenge: Service discovery → Solution: Netflix Eureka.
+
+Agile/Scrum:
+Use Case: Bi-weekly sprints with cross-functional teams. Led daily standups as Scrum Master.
+
+AWS S3:
+Use Case: Stored user-uploaded documents (e.g., invoices).
+Integration: Spring Boot + AWS SDK for direct uploads.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
