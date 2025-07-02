@@ -1,17 +1,11 @@
 package com.newgen.raroc.rarocController;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-
 import com.newgen.omni.wf.util.excp.NGException;
 import com.newgen.raroc.entities.InsertDataRequest;
 import com.newgen.raroc.entities.UpdateDataRequest;
 import com.newgen.raroc.service.DBOperationsService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/dbOperations")

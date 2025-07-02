@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class RarocApplicationRequest {
-
+	
 	String sessionID;
 
 	public String getSessionID() {
@@ -16,6 +16,6 @@ public class RarocApplicationRequest {
 	}
 
 
-
+	
 
 }

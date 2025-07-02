@@ -36,11 +36,11 @@ public class RequestAttributeDetails {
 	private String attributeType;
 	private String mappingVarName;
 	private String mappingColumnName;
-
+	
 	/* 23092022 Remove Existing Data*/
 	private String deleteTableEntry;
 	private String complexTableName;
-
+	
 	public String getDeleteTableEntry() {
 		return deleteTableEntry;
 	}
@@ -53,7 +53,7 @@ public class RequestAttributeDetails {
 	public void setComplexTableName(String complexTableName) {
 		this.complexTableName = complexTableName;
 	}
-
+	
 	//Added By Rishabh
 	private String fetchColumnName;
 	private String fetchTableName;
@@ -70,8 +70,8 @@ public class RequestAttributeDetails {
 	public void setFetchTableName(String fetchTableName) {
 		this.fetchTableName = fetchTableName;
 	}
-
-
-
-
+	
+	
+	
+	
 }

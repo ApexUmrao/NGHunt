@@ -1,10 +1,9 @@
 package com.newgen.raroc.service;
 
-import org.springframework.stereotype.Service;
-
 import com.newgen.omni.wf.util.excp.NGException;
 import com.newgen.raroc.entities.InsertDataRequest;
 import com.newgen.raroc.entities.UpdateDataRequest;
+import org.springframework.stereotype.Service;
 
 @Service
 public interface DBOperationsService {
